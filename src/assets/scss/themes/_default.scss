@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+body {
+  font-family: $font-family-default !important;
+  h1 {
+    font-size: 3rem;
+  }
+}

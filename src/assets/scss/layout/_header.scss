@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+$navbar-margin-top: $spacer * 1.5;
+
+nav {
+  margin-top: $navbar-margin-top;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+
+  .navbar-brand {
+    padding: 0.5rem 1.25rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.nav-link,
+.dropdown-item {
+  font-weight: 700;
+}

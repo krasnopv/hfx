@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+#hero {
+  z-index: 1;
+  top: 0;
+
+  video {
+    width: 100%;
+  }
+  
+  .overlay {
+    background-color: #131E2D;
+    opacity: 40%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+}
+
+main {
+  // margin-top: calc($logo-size + $navbar-brand-padding-y + $navbar-padding-y + $navbar-margin-top);
+  position: relative !important;
+  z-index: 999;
+
+  #about {
+    .title {
+      color: $white;
+    }
+  }
+}
