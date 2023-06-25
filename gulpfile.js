@@ -46,14 +46,14 @@ const files = {
 
 // RESET PANINI'S CACHE OF LAYOUTS AND PARTIALS
 function resetPages(done) {
-  log(chalk.red.bold('---------------CLEARING PANINI CACHE---------------'));
+  log(chalk.yellowBright('--------------- CLEARING PANINI CACHE ---------------'));
   panini.refresh();
   done();
 }
 
 // USING PANINI, TEMPLATE, PAGE AND PARTIAL FILES ARE COMBINED TO FORM HTML MARKUP
 function compileHTML() {
-  log(chalk.red.bold('---------------COMPILING HTML WITH PANINI---------------'));
+  log(chalk.yellowBright('--------------- COMPILING HTML WITH PANINI ---------------'));
   panini.refresh();
   return src('src/pages/**/*.html')
     .pipe(panini({
@@ -73,7 +73,7 @@ function compileHTML() {
 
 // COPY AND TRANSPILE CUSTOM JS
 function compileJS() {
-  log(chalk.red.bold('---------------COMPILE CUSTOM.JS---------------'));
+  log(chalk.yellowBright('--------------- COMPILE CUSTOM.JS ---------------'));
   return src(['src/assets/js/**/*.js'])
     .pipe(babel())
     .pipe(dest('dist/assets/js/'))
@@ -82,7 +82,7 @@ function compileJS() {
 
 // COMPILE SCSS INTO CSS
 function compileSCSS() {
-  log(chalk.red.bold('---------------COMPILING SCSS---------------'));
+  log(chalk.yellowBright('--------------- COMPILING SCSS ---------------'));
   return src(['src/assets/scss/main.scss', 'src/assets/scss/rtl.scss'])
     .pipe(sass({
       outputStyle: 'expanded',
@@ -97,7 +97,7 @@ function compileSCSS() {
 
 // COPY JS VENDOR FILES
 function jsVendor() {
-  log(chalk.red.bold('---------------COPY JAVASCRIPT VENDOR FILES INTO DIST---------------'));
+  log(chalk.yellowBright('--------------- COPY JAVASCRIPT VENDOR FILES INTO DIST ---------------'));
   return src([
       'node_modules/jquery/dist/jquery.js',
       'node_modules/popper.js/dist/umd/popper.js',
@@ -109,7 +109,7 @@ function jsVendor() {
 
 // COPY CSS VENDOR FILES
 function cssVendor() {
-  log(chalk.red.bold('---------------COPY CSS VENDOR FILES INTO DIST---------------'));
+  log(chalk.yellowBright('--------------- COPY CSS VENDOR FILES INTO DIST ---------------'));
   return src(['node_modules/animate.css/animate.css'])
     .pipe(dest('dist/assets/vendor/css'))
     .pipe(browserSync.stream());
@@ -117,7 +117,7 @@ function cssVendor() {
 
 // SCSS LINT
 function scssLint() {
-  log(chalk.red.bold('---------------SCSS LINTING---------------'));
+  log(chalk.yellowBright('--------------- SCSS LINTING ---------------'));
   return src('src/assets/scss/**/*.scss')
     .pipe(sassLint({
       configFile: '.scss-lint.yml'
@@ -128,7 +128,7 @@ function scssLint() {
 
 // HTML LINTER
 function htmlLint() {
-  log(chalk.red.bold('---------------HTML LINTING---------------'));
+  log(chalk.yellowBright('--------------- HTML LINTING ---------------'));
   return src('dist/**/*.html')
     .pipe(htmllint({}, htmllintReporter));
 }
@@ -136,11 +136,11 @@ function htmlLint() {
 function htmllintReporter(filepath, issues) {
   if (issues.length > 0) {
     issues.forEach(function (issue) {
-      log(colors.cyan('[gulp-htmllint] ') + colors.white(filepath + ' [' + issue.line + ']: ') + colors.red('(' + issue.code + ') ' + issue.msg));
+      log(colors.cyan('[gulp-htmllint] ') + colors.white(filepath + ' [' + issue.line + ']: ') + colors.yellowBright('(' + issue.code + ') ' + issue.msg));
     });
     process.exitCode = 1;
   } else {
-    log(chalk.green.bold('---------------NO HTML LINT ERROR---------------'));
+    log(chalk.green('--------------- NO HTML LINT ERROR ---------------'));
   }
 }
 
@@ -162,7 +162,7 @@ function watchFiles() {
 
 // BROWSER SYNC
 function browserSyncInit(done) {
-  log(chalk.red.bold('---------------BROWSER SYNC INIT---------------'));
+  log(chalk.yellowBright('--------------- BROWSER SYNC INIT ---------------'));
   browserSync.init({
     server: './dist'
   });
@@ -183,7 +183,7 @@ function deploy() {
 
 // COPIES AND MINIFY IMAGE TO DIST
 function copyImages() {
-  log(chalk.red.bold('---------------OPTIMIZING IMAGES---------------'));
+  log(chalk.yellowBright('--------------- OPTIMIZING IMAGES ---------------'));
   return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg)')
     .pipe(newer('dist/assets/img/'))
     .pipe(imagemin())
@@ -193,7 +193,7 @@ function copyImages() {
 
 // COPIES AND MINIFY VIDEO TO DIST
 function copyVideos() {
-  log(chalk.red.bold('---------------OPTIMIZING VIDEOS---------------'));
+  log(chalk.yellowBright('--------------- OPTIMIZING VIDEOS ---------------'));
   return src('src/assets/video/**/*.+(mov|mp4|mpeg)')
     .pipe(newer('dist/assets/video/'))
     .pipe(imagemin())
@@ -203,7 +203,7 @@ function copyVideos() {
 
 // PLACES FONT FILES IN THE DIST FOLDER
 function copyFont() {
-  log(chalk.red.bold('---------------COPYING FONTS INTO DIST FOLDER---------------'));
+  log(chalk.yellowBright('--------------- COPYING FONTS INTO DIST FOLDER ---------------'));
   return src([
       'src/assets/font/*',
     ])
@@ -213,7 +213,7 @@ function copyFont() {
 
 // PRETTIFY HTML FILES
 function prettyHTML() {
-  log(chalk.red.bold('---------------HTML PRETTIFY---------------'));
+  log(chalk.yellowBright('--------------- HTML PRETTIFY ---------------'));
   return src('dist/**/*.html')
     .pipe(prettyHtml({
       indent_size: 4,
@@ -225,14 +225,14 @@ function prettyHTML() {
 
 // DELETE DIST FOLDER
 function cleanDist(done) {
-  log(chalk.red.bold('---------------REMOVING OLD FILES FROM DIST---------------'));
+  log(chalk.yellowBright('--------------- REMOVING OLD FILES FROM DIST ---------------'));
   del.sync('dist');
   return done();
 }
 
 // CREATE DOCS FOLDER FOR DEMO
 function generateDocs() {
-  log(chalk.red.bold('---------------CREATING DOCS---------------'));
+  log(chalk.yellowBright('--------------- CREATING DOCS ---------------'));
   return src([
       'dist/**/*',
     ])
@@ -260,7 +260,7 @@ function HTMLAccessibility() {
 
 // CHANGE TO MINIFIED VERSIONS OF JS AND CSS
 function renameSources() {
-  log(chalk.red.bold('---------------RENAMING SOURCES---------------'));
+  log(chalk.yellowBright('--------------- RENAMING SOURCES ---------------'));
   return src('dist/**/*.html')
     .pipe(htmlreplace({
       'js': 'assets/js/main.min.js',
@@ -271,7 +271,7 @@ function renameSources() {
 
 // CONCATINATE JS SCRIPTS
 function concatScripts() {
-  log(chalk.red.bold('---------------CONCATINATE SCRIPTS---------------'));
+  log(chalk.yellowBright('--------------- CONCATINATE SCRIPTS ---------------'));
   return src([
       'dist/assets/vendor/js/jquery.js',
       'dist/assets/vendor/js/popper.js',
@@ -288,7 +288,7 @@ function concatScripts() {
 
 // MINIFY SCRIPTS
 function minifyScripts() {
-  log(chalk.red.bold('---------------MINIFY SCRIPTS---------------'));
+  log(chalk.yellowBright('--------------- MINIFY SCRIPTS ---------------'));
   return src('dist/assets/js/main.js')
     .pipe(removeLog())
     .pipe(removeCode({
@@ -301,7 +301,7 @@ function minifyScripts() {
 
 // PURGE CSS
 function purgeCSS() {
-  log(chalk.red.bold('---------------PURGE CSS---------------'));
+  log(chalk.yellowBright('--------------- PURGE CSS ---------------'));
   return src([
       'dist/assets/css/main.css',
     ])
@@ -314,7 +314,7 @@ function purgeCSS() {
 
 // MINIFY AND CONCAT CSS
 function minifyCSS() {
-  log(chalk.red.bold('---------------MINIFY CSS---------------'));
+  log(chalk.yellowBright('--------------- MINIFY CSS ---------------'));
   return src([
       'dist/assets/vendor/css/**/*',
       'dist/assets/css/main.css'

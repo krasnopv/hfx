@@ -24,6 +24,7 @@ main {
   // margin-top: calc($logo-size + $navbar-brand-padding-y + $navbar-padding-y + $navbar-margin-top);
   position: relative !important;
   z-index: 999;
+  top: 0;
 
   #about {
     .title {
