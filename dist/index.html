@@ -2,19 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Home - BOOTSTRAP GULP TARTER TEMPLATE</title>
-    <link rel="stylesheet" href="assets/fonts/font-awesome5.css">
-    <!-- build:css -->
-    <link rel="stylesheet" href="assets/vendor/css/animate.css">
+  <link rel="stylesheet" href="assets/fonts/font-awesome5.css">
+  <!-- build:css -->
+  <link rel="stylesheet" href="assets/vendor/css/animate.css">
 		<link rel="stylesheet" href="assets/css/main.css">
 		<!-- endbuild -->
-    <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
 
 <body>
+  <div class="position-fixed preloader min-vh-100 min-vw-100 d-flex justify-content-center align-items-center bg-black">
+    <img src="assets/img/logo.svg" alt="">
+  </div>  <div class="wrapper invisible">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">
@@ -53,17 +56,29 @@
       <div class="overlay min-vh-100"></div>
     </section>
     
-    <main role="main" class="w-100 position-absolute">
-      <section id="about" class="mt-4 mb-5 min-vh-100">
+    <main role="main" class="w-100">
+      <section id="hero2" class="mt-4 mb-5 min-vh-100">
         <div class="container mb-4">
           <div class="row d-flex justify-content-center align-items-center min-vh-100">
             <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
-              <h1 class="title text-center fw-bold">A trusted network of global<br>VFX and Real-time talent</h1>
+              <h1 class="title text-center font-weight-bold text-white">A trusted network of global<br>VFX and Real-time talent</h1>
               <button class="btn btn-light">Bid Request</button>
             </div>
           </div>
         </div>
       </section>
+      
+      <section id="about" class="mt-4 mb-5 min-vh-100">
+        <div class="container mb-4">
+          <div class="row d-flex justify-content-center align-items-center min-vh-100">
+            <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
+              <h1 class="title text-center font-weight-bold text-white">A trusted network of global<br>VFX and Real-time talent</h1>
+              <button class="btn btn-light">Bid Request</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </main>
     <footer class="footer pt-5 pb-5 text-center">
         <div class="container">
@@ -81,12 +96,11 @@
     <script src="assets/js/util/crossPlatform.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- endbuild -->
-    <div class="position-fixed preloader min-vh-100 min-vw-100 bg-dark">
-      <img src="assets/img/logo.svg" alt="">
-    </div>    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Playfair+Display:400,500,700&display=swap"> -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:400,500,700&display=swap">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Playfair+Display:400,500,700&display=swap"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:400,500,700&display=swap">
+  </div>
 </body>
 
 </html>

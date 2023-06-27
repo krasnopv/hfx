@@ -3,6 +3,8 @@
 // -----------------------------------------------------------------------------
 // https://bootstrapvars.com/4.4/
 
+$enable-extended-color-palette: true;
+
 $red:                         #f05555;
 $gray-100:                    #f7f7f7;
 $gray-200:                    #e4e4e4;
@@ -14,6 +16,7 @@ $success:                       $secondary;
 $info:                          $gray-900;
 $warning:                       $primary;
 $danger:                        $red;
+$dark:                        #131E2D;
 $black:                       #000000;
 
 
@@ -91,3 +94,5 @@ $container-max-widths: (
   xl: 1150px,
   xxl: 1310px
 );
+
+$font-size-small: $h3-font-size - $h6-font-size;

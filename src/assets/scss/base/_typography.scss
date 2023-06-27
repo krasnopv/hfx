@@ -85,7 +85,7 @@ h1,
   font-weight: $font-weight-normal;
   line-height: $h1-line-height-touch;
   letter-spacing: 0.13px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   @include media-breakpoint-up(lg) {
     @include font-size($h1-font-size);
