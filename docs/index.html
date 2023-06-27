@@ -12,62 +12,80 @@
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="assets/img/logo.svg" alt="Logo" class="d-inline-block align-text-top">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link active" aria-current="page" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#benefits">Benefits</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#get-started">Get Started</a>
-                    </li>
-                </ul>
-                <button class="btn btn-light">Bid Request</button>
-            </div>
-        </div>
-    </nav>
-
-    <section id="hero" class="min-vh-100 position-fixed">
-        <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
-            <source src="assets/video/hero.mov" type="video/mp4" />
-        </video>
-        <div class="overlay min-vh-100"></div>
-    </section>
-
-    <main role="main">
-        <section id="about" class="mt-4 mb-5">
-            <div class="container mb-4 min-vh-100">
-                <div class="row d-flex justify-content-center align-items-center min-vh-100">
-                    <div class="col-12 col-lg-12">
-                        <h1 class="title text-center fw-bold">A trusted network of global<br>VFX and Real-time talent</h1>
-                    </div>
+    <div class="position-fixed preloader min-vh-100 min-vw-100 d-flex justify-content-center align-items-center bg-black">
+        <img src="assets/img/logo.svg" alt="">
+    </div>
+    <div class="wrapper invisible">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="assets/img/logo.svg" alt="Logo" class="d-inline-block align-text-top">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link active" aria-current="page" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#benefits">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#get-started">Get Started</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-light">Bid Request</button>
                 </div>
             </div>
+        </nav>
+
+        <section id="hero" class="min-vh-100 position-fixed">
+            <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                <source src="assets/video/hero.mov" type="video/mp4" />
+            </video>
+            <div class="overlay min-vh-100"></div>
         </section>
-    </main>
-    <footer class="footer pt-5 pb-5 text-center">
-        <div class="container">
-            <p>© <span class="credits font-weight-bold">
+
+        <main role="main" class="w-100">
+            <section id="hero2" class="mt-4 mb-5 min-vh-100">
+                <div class="container mb-4">
+                    <div class="row d-flex justify-content-center align-items-center min-vh-100">
+                        <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
+                            <h1 class="title text-center font-weight-bold text-white">A trusted network of global<br>VFX and Real-time talent</h1>
+                            <button class="btn btn-light">Bid Request</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="mt-4 mb-5 min-vh-100">
+                <div class="container mb-4">
+                    <div class="row d-flex justify-content-center align-items-center min-vh-100">
+                        <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
+                            <h1 class="title text-center font-weight-bold text-white">A trusted network of global<br>VFX and Real-time talent</h1>
+                            <button class="btn btn-light">Bid Request</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer pt-5 pb-5 text-center">
+            <div class="container">
+                <p>© <span class="credits font-weight-bold">
                     <a href="https://github.com/johndavemanuel/bootstrap-gulp-starter-template" rel="noopener" target="_blank" class="text-dark">Bootstrap Gulp Starter Template</a>
                 </span>
-            </p>
-        </div>
-    </footer>
-    <script src="assets/js/main.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Playfair+Display:400,500,700&display=swap"> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:400,500,700&display=swap">
+                </p>
+            </div>
+        </footer>
+        <script src="assets/js/main.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Playfair+Display:400,500,700&display=swap"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:400,500,700&display=swap">
+    </div>
 </body>
 
 </html>

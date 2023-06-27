@@ -370,7 +370,7 @@ button:-moz-focusring,
   --warning: #30302e;
   --danger: #f05555;
   --light: #f7f7f7;
-  --dark: #343a40;
+  --dark: #131E2D;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -3306,6 +3306,12 @@ h1, .h1 {
 /* line 11, node_modules/bootstrap/scss/utilities/_flex.scss */
 
 /* line 12, node_modules/bootstrap/scss/utilities/_flex.scss */
+.flex-column {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+}
 
 /* line 13, node_modules/bootstrap/scss/utilities/_flex.scss */
 
@@ -3657,6 +3663,9 @@ h1, .h1 {
 /* line 7, node_modules/bootstrap/scss/utilities/_sizing.scss */
 
 /* line 7, node_modules/bootstrap/scss/utilities/_sizing.scss */
+.w-100 {
+  width: 100% !important;
+}
 
 /* line 7, node_modules/bootstrap/scss/utilities/_sizing.scss */
 
@@ -3675,6 +3684,9 @@ h1, .h1 {
 /* line 12, node_modules/bootstrap/scss/utilities/_sizing.scss */
 
 /* line 16, node_modules/bootstrap/scss/utilities/_sizing.scss */
+.min-vw-100 {
+  min-width: 100vw !important;
+}
 
 /* line 17, node_modules/bootstrap/scss/utilities/_sizing.scss */
 .min-vh-100 {
@@ -4427,6 +4439,9 @@ h1, .h1 {
 /* line 41, node_modules/bootstrap/scss/utilities/_text.scss */
 
 /* line 45, node_modules/bootstrap/scss/utilities/_text.scss */
+.text-white {
+  color: #fff !important;
+}
 
 /* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 
@@ -4458,12 +4473,12 @@ h1, .h1 {
 
 /* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 .text-dark {
-  color: #343a40 !important;
+  color: #131E2D !important;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 a.text-dark:hover, a.text-dark:focus {
-  color: #121416 !important;
+  color: black !important;
 }
 
 /* line 51, node_modules/bootstrap/scss/utilities/_text.scss */
@@ -4485,6 +4500,9 @@ a.text-dark:hover, a.text-dark:focus {
 /* line 7, node_modules/bootstrap/scss/utilities/_visibility.scss */
 
 /* line 11, node_modules/bootstrap/scss/utilities/_visibility.scss */
+.invisible {
+  visibility: hidden !important;
+}
 
 @media print {
   /* line 13, node_modules/bootstrap/scss/_print.scss */
@@ -4638,7 +4656,6 @@ h1, .h1 {
   font-weight: 400;
   line-height: 2.5rem;
   letter-spacing: 0.13px;
-  text-transform: uppercase;
 }
 
 @media (min-width: 1024px) {
@@ -4721,9 +4738,29 @@ nav .navbar-brand img {
 }
 
 /* line 24, src/assets/scss/layout/_header.scss */
-.nav-link {
-  font-weight: 700;
+nav .navbar-nav .nav-item {
+  margin-right: 1rem;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
 }
+
+/* line 27, src/assets/scss/layout/_header.scss */
+nav .navbar-nav .nav-item .nav-link {
+  border-radius: 50rem;
+  padding: 0.5rem 1rem !important;
+  font-size: 0.8125rem;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* line 33, src/assets/scss/layout/_header.scss */
+nav .navbar-nav .nav-item .nav-link:hover {
+  color: #fff;
+  background-color: #131E2D;
+}
+
+/* line 42, src/assets/scss/layout/_header.scss */
 
 /* line 4, src/assets/scss/layout/_footer.scss */
 .footer {
@@ -4733,6 +4770,20 @@ nav .navbar-brand img {
 /* line 5, src/assets/scss/components/_button.scss */
 .btn {
   border-radius: 50rem;
+  font-size: 0.8125rem;
+}
+
+/* line 1, src/assets/scss/components/_preloader.scss */
+.preloader {
+  z-index: 9999;
+  top: 0;
+  background-color: #000000;
+}
+
+/* line 6, src/assets/scss/components/_preloader.scss */
+.preloader img {
+  position: absolute;
+  margin: auto;
 }
 
 /* line 5, src/assets/scss/pages/_home.scss */
@@ -4748,7 +4799,7 @@ nav .navbar-brand img {
 
 /* line 13, src/assets/scss/pages/_home.scss */
 #hero .overlay {
-  background-color: #131E2D;
+  background-color: #000000;
   opacity: 40%;
   width: 100%;
   height: 100%;
@@ -4760,11 +4811,7 @@ nav .navbar-brand img {
 main {
   position: relative !important;
   z-index: 999;
-}
-
-/* line 29, src/assets/scss/pages/_home.scss */
-main #about .title {
-  color: #fff;
+  top: 0;
 }
 
 /* line 6, src/assets/scss/themes/_default.scss */

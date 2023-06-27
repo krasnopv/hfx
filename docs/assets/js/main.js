@@ -17797,13 +17797,30 @@ var Platform = {};
 
 "use strict";
 
-$(document).ready(function() {
-  $('body').autoPadding({
-    source: $('.js-header'),
+$(document).ready(function () {
+  $("body").autoPadding({
+    source: $(".js-header"),
   });
-    //removeIf(production)
-    console.log("document ready");
-    //endRemoveIf(production)
+  console.log("Ready!");
+});
+
+$(window).on("load", function () {
+  const navHeight = parseInt($("nav").css("height"));
+  const sectionMarginTop = parseInt($("section").css("margin-top"));
+  const navMarginTop = parseInt($("nav").css("margin-top"));
+  // $('.preloader').addClass('preloader-deactivate');
+  $(".wrapper").removeClass("invisible");
+  setTimeout(function () {
+    $(".preloader").remove();
+  }, 500);
+  const titleMarginTop =
+    parseInt($("#hero2 h1").css("margin-bottom")) +
+    parseInt($("#hero2 button").css("height"));
+  $("#hero2 h1").css({ "margin-top": titleMarginTop });
+  const mainTop = 0 - navHeight - navMarginTop - sectionMarginTop;
+  $("main").css({ 'top': mainTop, 'margin-top': 0 - sectionMarginTop });
+
+  console.log("Loaded!");
 });
 
 //# sourceMappingURL=main.js.map
