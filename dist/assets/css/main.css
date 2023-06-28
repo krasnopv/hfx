@@ -115,10 +115,18 @@ a:hover {
  */
 /* line 135, src/assets/scss/vendors/_normalize.scss */
 
+strong {
+  font-weight: inherit;
+}
+
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 /* line 144, src/assets/scss/vendors/_normalize.scss */
+
+strong {
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -419,7 +427,7 @@ body {
 /* line 76, node_modules/bootstrap/scss/_reboot.scss */
 
 /* line 92, node_modules/bootstrap/scss/_reboot.scss */
-h1 {
+h1, h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -454,6 +462,10 @@ ul ul {
 /* line 152, node_modules/bootstrap/scss/_reboot.scss */
 
 /* line 156, node_modules/bootstrap/scss/_reboot.scss */
+
+strong {
+  font-weight: 800;
+}
 
 /* line 161, node_modules/bootstrap/scss/_reboot.scss */
 
@@ -600,8 +612,8 @@ button::-moz-focus-inner,
 /* line 482, node_modules/bootstrap/scss/_reboot.scss */
 
 /* line 7, node_modules/bootstrap/scss/_type.scss */
-h1,
-.h1 {
+h1, h2,
+.h1, .h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -613,6 +625,9 @@ h1, .h1 {
 }
 
 /* line 17, node_modules/bootstrap/scss/_type.scss */
+h2, .h2 {
+  font-size: 2.4375rem;
+}
 
 /* line 18, node_modules/bootstrap/scss/_type.scss */
 
@@ -739,7 +754,7 @@ h1, .h1 {
 /* line 59, node_modules/bootstrap/scss/_grid.scss */
 
 /* line 8, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
- .col-12, .col-lg-12 {
+ .col-12, .col-md-6, .col-md-12, .col-lg-12 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -909,12 +924,24 @@ h1, .h1 {
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
+  .col-md-6 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
+  .col-md-12 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
   /* line 60, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 62, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 65, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
@@ -4526,11 +4553,15 @@ a.text-dark:hover, a.text-dark:focus {
     page-break-inside: avoid;
   }
   /* line 63, node_modules/bootstrap/scss/_print.scss */
-  p {
+  p,
+  h2 {
     orphans: 3;
     widows: 3;
   }
   /* line 70, node_modules/bootstrap/scss/_print.scss */
+  h2 {
+    page-break-after: avoid;
+  }
   @page {
     size: a3;
   }
@@ -4612,15 +4643,15 @@ body {
 }
 
 /* line 30, src/assets/scss/base/_typography.scss */
-h1,
-.h1 {
+h1, h2,
+.h1, .h2 {
   margin-bottom: 28px;
 }
 
 @media (min-width: 1024px) {
   /* line 30, src/assets/scss/base/_typography.scss */
-  h1,
-  .h1 {
+  h1, h2,
+  .h1, .h2 {
     margin-bottom: 36px;
   }
 }
@@ -4643,16 +4674,20 @@ p {
 
 /* line 63, src/assets/scss/base/_typography.scss */
 h1,
-.h1 {
+h2,
+.h1,
+.h2 {
   font-family: "Montserrat", sans-serif;
 }
 
 /* line 74, src/assets/scss/base/_typography.scss */
 
 /* line 81, src/assets/scss/base/_typography.scss */
-h1, .h1 {
-  color: #111111;
-  font-size: 2.25rem;
+h1,
+.h1,
+h2,
+.h2 {
+  font-size: 1.0625rem;
   font-weight: 400;
   line-height: 2.5rem;
   letter-spacing: 0.13px;
@@ -4660,41 +4695,38 @@ h1, .h1 {
 
 @media (min-width: 1024px) {
   /* line 81, src/assets/scss/base/_typography.scss */
-  h1, .h1 {
-    font-size: 4rem;
+  h1,
+  .h1,
+  h2,
+  .h2 {
+    font-size: 3rem;
     letter-spacing: 0.22px;
     line-height: 4.5rem;
   }
 }
 
-/* line 97, src/assets/scss/base/_typography.scss */
+/* line 115, src/assets/scss/base/_typography.scss */
 
 @media (min-width: 1024px) {
-  /* line 97, src/assets/scss/base/_typography.scss */
+  /* line 115, src/assets/scss/base/_typography.scss */
 }
 
-/* line 113, src/assets/scss/base/_typography.scss */
+/* line 131, src/assets/scss/base/_typography.scss */
 
 @media (min-width: 1024px) {
-  /* line 113, src/assets/scss/base/_typography.scss */
+  /* line 131, src/assets/scss/base/_typography.scss */
 }
 
-/* line 129, src/assets/scss/base/_typography.scss */
+/* line 146, src/assets/scss/base/_typography.scss */
 
 @media (min-width: 1024px) {
-  /* line 129, src/assets/scss/base/_typography.scss */
+  /* line 146, src/assets/scss/base/_typography.scss */
 }
 
-/* line 144, src/assets/scss/base/_typography.scss */
+/* line 161, src/assets/scss/base/_typography.scss */
 
 @media (min-width: 1024px) {
-  /* line 144, src/assets/scss/base/_typography.scss */
-}
-
-/* line 159, src/assets/scss/base/_typography.scss */
-
-@media (min-width: 1024px) {
-  /* line 159, src/assets/scss/base/_typography.scss */
+  /* line 161, src/assets/scss/base/_typography.scss */
 }
 
 /**
@@ -4773,6 +4805,79 @@ nav .navbar-nav .nav-item .nav-link:hover {
   font-size: 0.8125rem;
 }
 
+/* line 5, src/assets/scss/components/_hex.scss */
+.hex-small {
+  height: 550px;
+}
+
+/* line 8, src/assets/scss/components/_hex.scss */
+.hex-small .hex {
+  position: absolute;
+  padding: 0% 8%;
+}
+
+/* line 12, src/assets/scss/components/_hex.scss */
+.hex-small .hex.left {
+  left: 0;
+}
+
+/* line 18, src/assets/scss/components/_hex.scss */
+.hex-mid {
+  height: 776px;
+  padding: 0% 8%;
+  margin-top: -178px;
+}
+
+/* line 23, src/assets/scss/components/_hex.scss */
+.hex-mid .hex {
+  padding: 0% 4%;
+}
+
+/* line 28, src/assets/scss/components/_hex.scss */
+
+/* line 33, src/assets/scss/components/_hex.scss */
+.hex {
+  -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  height: 100%;
+}
+
+/* line 43, src/assets/scss/components/_hex.scss */
+.hex p {
+  margin-bottom: 1.5rem;
+}
+
+/* line 45, src/assets/scss/components/_hex.scss */
+.hex p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 50, src/assets/scss/components/_hex.scss */
+.hex.dark {
+  background-color: #131E2D;
+  color: #fff !important;
+}
+
+/* line 54, src/assets/scss/components/_hex.scss */
+.hex.white {
+  background-color: #fff;
+  color: #131E2D !important;
+}
+
 /* line 1, src/assets/scss/components/_preloader.scss */
 .preloader {
   z-index: 9999;
@@ -4817,11 +4922,6 @@ main {
 /* line 6, src/assets/scss/themes/_default.scss */
 body {
   font-family: "Montserrat", sans-serif !important;
-}
-
-/* line 8, src/assets/scss/themes/_default.scss */
-body h1 {
-  font-size: 3rem;
 }
 
 /*# sourceMappingURL=../../../scss */

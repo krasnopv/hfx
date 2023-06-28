@@ -79,36 +79,38 @@ h6,
 }
 
 h1,
-.h1 {
-  color: $text-color-1;
-  font-size: $h1-font-size-touch;
+.h1,
+h2,
+.h2 {
+  // color: $text-color-1;
+  font-size: $h3-font-size-touch;
   font-weight: $font-weight-normal;
   line-height: $h1-line-height-touch;
   letter-spacing: 0.13px;
   // text-transform: uppercase;
 
   @include media-breakpoint-up(lg) {
-    @include font-size($h1-font-size);
+    @include font-size(3rem);
     letter-spacing: 0.22px;
     line-height: $h1-line-height;
   }
 }
 
-h2,
-.h2 {
-  color: $text-color-1;
-  font-size: $h2-font-size-touch;
-  font-weight: $font-weight-normal;
-  letter-spacing: 0.08px;
-  line-height: $h2-line-height-touch;
-  text-transform: initial;
+// h2,
+// .h2 {
+//   color: $text-color-1;
+//   font-size: $h2-font-size-touch;
+//   font-weight: $font-weight-normal;
+//   letter-spacing: 0.08px;
+//   line-height: $h2-line-height-touch;
+//   text-transform: initial;
 
-  @include media-breakpoint-up(lg) {
-    @include font-size($h2-font-size);
-    letter-spacing: 0.14px;
-    line-height: $h2-line-height;
-  }
-}
+//   @include media-breakpoint-up(lg) {
+//     @include font-size($h2-font-size);
+//     letter-spacing: 0.14px;
+//     line-height: $h2-line-height;
+//   }
+// }
 
 h3,
 .h3 {

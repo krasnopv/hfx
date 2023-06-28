@@ -1,13 +1,58 @@
-.hex {
-  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
-  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+$hex-small-height: 550px;
+$hex-mid-height: 776px;
+$hex-large-height: 1303px;
+
+.hex-small {
+  height: $hex-small-height;
   
+  .hex {
+    position: absolute;
+    padding: 0% 8%;
+    
+    &.left {
+      left: 0;
+    }
+  }
+}
+
+.hex-mid {
+  height: $hex-mid-height;
+  padding: 0% 8%;
+  margin-top: 0 - $hex-mid-height / 4 + 16px;
+
+  .hex {
+    padding: 0% 4%;
+  }
+}
+
+.hex-large {
+  height: $hex-large-height;
+  padding: 0% 8%;
+}
+
+.hex {
+  -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  
+  p {
+    margin-bottom: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &.dark {
     background-color: $dark;
-    color: $white;
+    color: $white !important;
   }
   &.white {
     background-color: $white;
-    color: $dark;
+    color: $dark !important;
   }
 }
