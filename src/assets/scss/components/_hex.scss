@@ -1,10 +1,15 @@
-$hex-small-height: 550px;
-$hex-mid-height: 776px;
-$hex-large-height: 1303px;
+$hex-height-small: 550px;
+$hex-height-small-counter: 661px;
+$hex-height-mid: 776px;
+$hex-height-large: 1303px;
 
 .hex-small {
-  height: $hex-small-height;
+  height: $hex-height-small;
   
+  &.hex-counter {
+    height: $hex-height-small-counter;
+  }
+
   .hex {
     position: absolute;
     padding: 0% 8%;
@@ -12,13 +17,19 @@ $hex-large-height: 1303px;
     &.left {
       left: 0;
     }
+
+    &.right {
+      margin-top: 0 - $hex-height-large + $hex-height-large/4 - $hex-height-small-counter/4;
+      left: 0;
+      margin-left: 0.5rem;
+    }
   }
 }
 
 .hex-mid {
-  height: $hex-mid-height;
+  height: $hex-height-mid;
   padding: 0% 8%;
-  margin-top: 0 - $hex-mid-height / 4 + 16px;
+  margin-top: 0 - $hex-height-mid / 4 + 10px;
 
   .hex {
     padding: 0% 4%;
@@ -26,8 +37,14 @@ $hex-large-height: 1303px;
 }
 
 .hex-large {
-  height: $hex-large-height;
+  height: $hex-height-large;
   padding: 0% 8%;
+  margin-top: 0 - $hex-height-large / 4 + 10px;
+
+  .hex {
+    margin-left: 0 - map-get($container-max-widths , xl);
+    padding: 0% 10%;
+  }
 }
 
 .hex {
