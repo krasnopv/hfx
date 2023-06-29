@@ -731,13 +731,6 @@ h2, .h2 {
   }
 }
 
-@media (min-width: 1440px) {
-  /* line 20, node_modules/bootstrap/scss/_grid.scss */
-  .container {
-    max-width: 1310px;
-  }
-}
-
 /* line 49, node_modules/bootstrap/scss/_grid.scss */
 .row {
   display: -webkit-box;
@@ -754,7 +747,7 @@ h2, .h2 {
 /* line 59, node_modules/bootstrap/scss/_grid.scss */
 
 /* line 8, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
- .col-12, .col-md-6, .col-md-12, .col-lg-12 {
+ .col-6, .col-12, .col-sm-3, .col-md-6, .col-md-12, .col-lg-12 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -788,6 +781,12 @@ h2, .h2 {
 /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
 
 /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
+.col-6 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
 
 /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
 
@@ -848,6 +847,9 @@ h2, .h2 {
 /* line 72, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
 
 /* line 72, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
+.offset-6 {
+  margin-left: 50%;
+}
 
 /* line 72, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
 
@@ -871,6 +873,12 @@ h2, .h2 {
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
+  .col-sm-3 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    max-width: 25%;
+  }
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
@@ -3363,6 +3371,11 @@ h2, .h2 {
 /* line 25, node_modules/bootstrap/scss/utilities/_flex.scss */
 
 /* line 26, node_modules/bootstrap/scss/utilities/_flex.scss */
+.justify-content-end {
+  -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
+}
 
 /* line 27, node_modules/bootstrap/scss/utilities/_flex.scss */
 .justify-content-center {
@@ -4406,6 +4419,9 @@ h2, .h2 {
 /* line 14, node_modules/bootstrap/scss/utilities/_text.scss */
 
 /* line 22, node_modules/bootstrap/scss/utilities/_text.scss */
+.text-left {
+  text-align: left !important;
+}
 
 /* line 23, node_modules/bootstrap/scss/utilities/_text.scss */
 
@@ -4688,7 +4704,7 @@ h1,
 h2,
 .h2 {
   font-size: 1.0625rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 2.5rem;
   letter-spacing: 0.13px;
 }
@@ -4805,37 +4821,60 @@ nav .navbar-nav .nav-item .nav-link:hover {
   font-size: 0.8125rem;
 }
 
-/* line 5, src/assets/scss/components/_hex.scss */
+/* line 6, src/assets/scss/components/_hex.scss */
 .hex-small {
   height: 550px;
 }
 
-/* line 8, src/assets/scss/components/_hex.scss */
+/* line 9, src/assets/scss/components/_hex.scss */
+.hex-small.hex-counter {
+  height: 661px;
+}
+
+/* line 13, src/assets/scss/components/_hex.scss */
 .hex-small .hex {
   position: absolute;
   padding: 0% 8%;
 }
 
-/* line 12, src/assets/scss/components/_hex.scss */
+/* line 17, src/assets/scss/components/_hex.scss */
 .hex-small .hex.left {
   left: 0;
 }
 
-/* line 18, src/assets/scss/components/_hex.scss */
+/* line 21, src/assets/scss/components/_hex.scss */
+.hex-small .hex.right {
+  margin-top: -1142.5px;
+  left: 0;
+  margin-left: 0.5rem;
+}
+
+/* line 29, src/assets/scss/components/_hex.scss */
 .hex-mid {
   height: 776px;
   padding: 0% 8%;
-  margin-top: -178px;
+  margin-top: -184px;
 }
 
-/* line 23, src/assets/scss/components/_hex.scss */
+/* line 34, src/assets/scss/components/_hex.scss */
 .hex-mid .hex {
   padding: 0% 4%;
 }
 
-/* line 28, src/assets/scss/components/_hex.scss */
+/* line 39, src/assets/scss/components/_hex.scss */
+.hex-large {
+  height: 1303px;
+  padding: 0% 8%;
+  margin-top: -315.75px;
+}
 
-/* line 33, src/assets/scss/components/_hex.scss */
+/* line 44, src/assets/scss/components/_hex.scss */
+.hex-large .hex {
+  margin-left: -1150px;
+  padding: 0% 10%;
+}
+
+/* line 50, src/assets/scss/components/_hex.scss */
 .hex {
   -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
@@ -4856,23 +4895,23 @@ nav .navbar-nav .nav-item .nav-link:hover {
   height: 100%;
 }
 
-/* line 43, src/assets/scss/components/_hex.scss */
+/* line 60, src/assets/scss/components/_hex.scss */
 .hex p {
   margin-bottom: 1.5rem;
 }
 
-/* line 45, src/assets/scss/components/_hex.scss */
+/* line 62, src/assets/scss/components/_hex.scss */
 .hex p:last-child {
   margin-bottom: 0;
 }
 
-/* line 50, src/assets/scss/components/_hex.scss */
+/* line 67, src/assets/scss/components/_hex.scss */
 .hex.dark {
   background-color: #131E2D;
   color: #fff !important;
 }
 
-/* line 54, src/assets/scss/components/_hex.scss */
+/* line 71, src/assets/scss/components/_hex.scss */
 .hex.white {
   background-color: #fff;
   color: #131E2D !important;
@@ -4889,6 +4928,28 @@ nav .navbar-nav .nav-item .nav-link:hover {
 .preloader img {
   position: absolute;
   margin: auto;
+}
+
+/* line 1, src/assets/scss/components/_statistics.scss */
+.counter-txt {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.1;
+}
+
+/* line 10, src/assets/scss/components/_statistics.scss */
+.counter-txt .counter-value {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+/* line 18, src/assets/scss/components/_statistics.scss */
+.counter-txt span {
+  display: block;
+  font-size: 36px;
 }
 
 /* line 5, src/assets/scss/pages/_home.scss */
