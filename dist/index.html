@@ -2,239 +2,243 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HFX - VFX and Real-time talent</title>
-    <link rel="stylesheet" href="assets/fonts/font-awesome5.css">
-    <!-- build:css -->
-    <link rel="stylesheet" href="assets/vendor/css/animate.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <!-- endbuild -->
-    <link rel="stylesheet" href="assets/css/rtl.css">
-    <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HFX - VFX and Real-time talent</title>
+  <link rel="stylesheet" href="assets/fonts/font-awesome5.css">
+  <!-- build:css -->
+  <link rel="stylesheet" href="assets/vendor/css/animate.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- endbuild -->
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16" />
 </head>
 
 <body>
-    <div class="position-fixed preloader min-vh-100 min-vw-100 d-flex justify-content-center align-items-center bg-black">
-        <img src="assets/img/logo.svg" alt="">
-    </div>
-    <div class="wrapper invisible">
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">
-                    <img src="assets/img/logo.svg" alt="Logo" class="d-inline-block align-text-top">
-                </a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link active" aria-current="page" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#benefits">Benefits</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#get-started">Get Started</a>
-                        </li>
-                    </ul>
-                    <button class="btn btn-light">Bid Request</button>
-                </div>
+  <div class="position-fixed preloader min-vh-100 min-vw-100 d-flex justify-content-center align-items-center bg-black">
+    <img src="assets/img/logo.svg" alt="">
+  </div>  <div class="wrapper invisible">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="assets/img/logo.svg" alt="Logo" class="d-inline-block align-text-top">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link active" aria-current="page" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#benefits">Benefits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#get-started">Get Started</a>
+            </li>
+          </ul>
+          <button class="btn btn-light">Bid Request</button>
+        </div>
+      </div>
+    </nav>
+    
+    <section id="hero" class="min-vh-100 position-fixed">
+      <video
+        id="background-video"
+        autoplay
+        loop
+        muted
+        poster="https://assets.codepen.io/6093409/river.jpg"
+      >
+        <source src="assets/video/hero.mov" type="video/mp4" />
+      </video>
+      <div class="overlay min-vh-100"></div>
+    </section>
+    
+    <main role="main" class="w-100">
+      <section id="hero2" class="mt-4 mb-5 min-vh-100">
+        <div class="container mb-4">
+          <div class="row d-flex justify-content-center align-items-center min-vh-100">
+            <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
+              <h1 class="title text-center font-weight-bold text-white">A trusted network of global<br>VFX and Real-time talent</h1>
+              <button class="btn btn-light">Bid Request</button>
             </div>
-        </nav>
-
-        <section id="hero" class="min-vh-100 position-fixed">
-            <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
-                <source src="assets/video/hero.mov" type="video/mp4" />
-            </video>
-            <div class="overlay min-vh-100"></div>
-        </section>
-
-        <main role="main" class="w-100">
-            <section id="hero2" class="mt-4 mb-5 min-vh-100">
-                <div class="container mb-4">
-                    <div class="row d-flex justify-content-center align-items-center min-vh-100">
-                        <div class="col-12 col-lg-12 d-flex flex-column align-items-center">
-                            <h1 class="title text-center font-weight-bold text-white">A trusted network of global<br>VFX and Real-time talent</h1>
-                            <button class="btn btn-light">Bid Request</button>
-                        </div>
-                    </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="about" class="mt-4 mb-5 min-vh-100">
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-6 d-flex flex-column align-items-center background-dark col-hex hex-small">
+              <div class="hex dark left">
+                <p>
+                  We’ve now made it easier than ever to connect to our 300+ experienced artists and supervisors.
+                </p>
+                <p>
+                  Our network has been tried and tested over the last 20 years by some of the leading studios, production companies and agencies alike.
+                </p>
+                <p>
+                  Delivering thousands of Visual Effects and Design projects, for TV, advertising, episodic and experiential.
+                </p>
+              </div>
+            </div>
+      
+            <div class="d-xs-none col-md-6 d-flex flex-column align-items-center"></div>
+          </div>
+        </div>
+      
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-12 d-flex flex-column align-items-center background-dark col-hex hex-mid">
+              <div class="hex white">
+                <h2>
+                  About Hive FX
+                </h2>
+                <p>
+                  Hivefx is a Visual Effects global collective known for Producing High Quality VFX work for Feature Films, Episodic, Design, TV,  and Experiential Advertising.
+                </p>
+                <p>
+                  Our collective has been built over the last 20 years, establishing strong, reliable and trusted partners that deliver exceptional work for our clients, time and time again. HiveFX is in essence a formalisation of this collective, giving our clients a single point of contact. Not only that, we have streamlined our collectives’ pipeline and are able to run projects across multiple studios seamlessly.
+                </p>
+              </div>
+            </div>
+      
+            <div class="d-xs-none col-md-6 d-flex flex-column align-items-center"></div>
+          </div>
+        </div>
+      
+        <div class="container">
+          <div class="row d-flex justify-content-end align-items-center">
+            <div class="col-12 col-md-12 d-flex flex-column align-items-center background-dark col-hex hex-large">
+              <div class="hex white left">
+                <div class="col-6 offset-6 text-left">
+                  <h2>
+                    Hive FX Services
+                  </h2>
+                  <p>
+                    Our visual effects services include; Photorealistic CG Environments built from the ground up, to Expansive Blue/Green Screen Set Extension,  Realtime 360 environments for large LED volumes and Virtual Production sets, 3d Modelling, Retouch-Prep, Rotoscopy, Matte Paint, Compositing, Animation, Matchmove, and Rotomation. 
+                  </p>
+                  <p>
+                    We work with projects of all sizes and offer flexible solutions tailored to your specific needs. This includes providing a team of artists to seamlessly integrate into your existing team and pipeline. Alternatively, we can take on entire shots or elements that are more suitable for outsourcing.
+                  </p>
+                  <p>
+                    Data security and privacy is paramount to how we operate our business. Our collective can provide secure network and data management approved by The Trusted Partner Network.
+                  </p>
+                  <p>
+                    Our collective is made up of 5 studios across EMEA and APAC.
+                  </p>
                 </div>
-            </section>
-
-            <section id="about" class="mt-4 mb-5 min-vh-100">
-                <div class="container">
-                    <div class="row d-flex justify-content-center align-items-center">
-                        <div class="col-12 col-md-6 d-flex flex-column align-items-center background-dark col-hex hex-small">
-                            <div class="hex dark left">
-                                <p>
-                                    We’ve now made it easier than ever to connect to our 300+ experienced artists and supervisors.
-                                </p>
-                                <p>
-                                    Our network has been tried and tested over the last 20 years by some of the leading studios, production companies and agencies alike.
-                                </p>
-                                <p>
-                                    Delivering thousands of Visual Effects and Design projects, for TV, advertising, episodic and experiential.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="d-xs-none col-md-6 d-flex flex-column align-items-center"></div>
+              </div>
+            </div>
+      
+            <div class="col-12 col-md-6 d-flex flex-column align-items-center background-dark col-hex hex-small hex-counter">
+              <div class="hex dark right">
+                <div id="counter" class="container">
+                  <div class="row">
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="8">0</span>Producers
                     </div>
-                </div>
-
-                <div class="container">
-                    <div class="row d-flex justify-content-center align-items-center">
-                        <div class="col-12 col-md-12 d-flex flex-column align-items-center background-dark col-hex hex-mid">
-                            <div class="hex white">
-                                <h2>
-                                    About Hive FX
-                                </h2>
-                                <p>
-                                    Hivefx is a Visual Effects global collective known for Producing High Quality VFX work for Feature Films, Episodic, Design, TV,  and Experiential Advertising.
-                                </p>
-                                <p>
-                                    Our collective has been built over the last 20 years, establishing strong, reliable and trusted partners that deliver exceptional work for our clients, time and time again. HiveFX is in essence a formalisation of this collective, giving our clients a single point of contact. Not only that, we have streamlined our collectives’ pipeline and are able to run projects across multiple studios seamlessly.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="d-xs-none col-md-6 d-flex flex-column align-items-center"></div>
+                
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="5">0</span>Head of Studios
                     </div>
-                </div>
-
-                <div class="container">
-                    <div class="row d-flex justify-content-end align-items-center">
-                        <div class="col-12 col-md-12 d-flex flex-column align-items-center background-dark col-hex hex-large">
-                            <div class="hex white left">
-                                <div class="col-6 offset-6 text-left">
-                                    <h2>
-                                        Hive FX Services
-                                    </h2>
-                                    <p>
-                                        Our visual effects services include; Photorealistic CG Environments built from the ground up, to Expansive Blue/Green Screen Set Extension,  Realtime 360 environments for large LED volumes and Virtual Production sets, 3d Modelling, Retouch-Prep, Rotoscopy, Matte Paint, Compositing, Animation, Matchmove, and Rotomation. 
-                                    </p>
-                                    <p>
-                                        We work with projects of all sizes and offer flexible solutions tailored to your specific needs. This includes providing a team of artists to seamlessly integrate into your existing team and pipeline. Alternatively, we can take on entire shots or elements that are more suitable for outsourcing.
-                                    </p>
-                                    <p>
-                                        Data security and privacy is paramount to how we operate our business. Our collective can provide secure network and data management approved by The Trusted Partner Network.
-                                    </p>
-                                    <p>
-                                        Our collective is made up of 5 studios across EMEA and APAC.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 d-flex flex-column align-items-center background-dark col-hex hex-small hex-counter">
-                            <div class="hex dark right">
-                                <div id="counter" class="container">
-                                    <div class="row">
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="8">0</span>Producers
-                                        </div>
-
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="5">0</span>Head of Studios
-                                        </div>
-
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="3">0</span>Creative Directors
-                                        </div>
-
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="3">0</span>Head of CG / Tech Dir.
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="55">0</span>Matchmove
-                                        </div>
-
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="45">0</span>Prep /<br />Paint
-                                        </div>
-
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="95">0</span>Roto
-                                        </div>
-
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="8">0</span>VFX<br />Supervisors
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="15">0</span>3D Artists
-                                        </div>
-
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="3">0</span>Riggers
-                                        </div>
-
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="8">0</span>RT Artists
-                                        </div>
-
-                                        <div class="col-sm-3 counter-txt">
-                                            <span class="counter-value" data-count="25">0</span>Comp
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="3">0</span>Creative Directors
                     </div>
-                </div>
-
-                <div class="container">
-                    <div class="row d-flex justify-content-center align-items-center">
-                        <div class="col-12 col-md-12 d-flex flex-column align-items-center background-dark col-hex hex-mid">
-                            <div class="hex white">
-                                <h2>
-                                    About Hive FX
-                                </h2>
-                                <p>
-                                    Hivefx is a Visual Effects global collective known for Producing High Quality VFX work for Feature Films, Episodic, Design, TV,  and Experiential Advertising.
-                                </p>
-                                <p>
-                                    Our collective has been built over the last 20 years, establishing strong, reliable and trusted partners that deliver exceptional work for our clients, time and time again. HiveFX is in essence a formalisation of this collective, giving our clients a single point of contact. Not only that, we have streamlined our collectives’ pipeline and are able to run projects across multiple studios seamlessly.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="d-xs-none col-md-6 d-flex flex-column align-items-center"></div>
+                
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="3">0</span>Head of CG / Tech Dir.
                     </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="55">0</span>Matchmove
+                    </div>
+                
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="45">0</span>Prep /<br />Paint
+                    </div>
+                
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="95">0</span>Roto
+                    </div>
+                
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="8">0</span>VFX<br />Supervisors
+                    </div>
+                  </div>
+                
+                  <div class="row">
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="15">0</span>3D Artists
+                    </div>
+                
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="3">0</span>Riggers
+                    </div>
+                
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="8">0</span>RT Artists
+                    </div>
+                
+                    <div class="col-sm-3 counter-txt">
+                      <span class="counter-value" data-count="25">0</span>Comp
+                    </div>
+                  </div>
                 </div>
-
-
-            </section>
-        </main>
-        <footer class="footer pt-5 pb-5 text-center">
-            <div class="container">
-                <p>© <span class="credits font-weight-bold">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-12 d-flex flex-column align-items-center background-dark col-hex hex-mid">
+              <div class="hex white">
+                <h2>
+                  About Hive FX
+                </h2>
+                <p>
+                  Hivefx is a Visual Effects global collective known for Producing High Quality VFX work for Feature Films, Episodic, Design, TV,  and Experiential Advertising.
+                </p>
+                <p>
+                  Our collective has been built over the last 20 years, establishing strong, reliable and trusted partners that deliver exceptional work for our clients, time and time again. HiveFX is in essence a formalisation of this collective, giving our clients a single point of contact. Not only that, we have streamlined our collectives’ pipeline and are able to run projects across multiple studios seamlessly.
+                </p>
+              </div>
+            </div>
+      
+            <div class="d-xs-none col-md-6 d-flex flex-column align-items-center"></div>
+          </div>
+        </div>
+      
+      
+      </section></main>
+    <footer class="footer pt-5 pb-5 text-center">
+        <div class="container">
+            <p>© <span class="credits font-weight-bold">
                     <a href="https://github.com/johndavemanuel/bootstrap-gulp-starter-template" rel="noopener" target="_blank" class="text-dark">Bootstrap Gulp Starter Template</a>
                 </span>
-                </p>
-            </div>
-        </footer>
-        <!-- build:js -->
-        <script src="assets/vendor/js/jquery.js"></script>
-        <script src="assets/vendor/js/popper.js"></script>
-        <script src="assets/vendor/js/bootstrap.js"></script>
-        <script src="assets/js/util/autoPadding.js"></script>
-        <script src="assets/js/util/crossPlatform.js"></script>
-        <script src="assets/js/main.js"></script>
-        <!-- endbuild -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:400,500,700&display=swap">
-    </div>
+            </p>
+        </div>
+    </footer>
+    <!-- build:js -->
+    <script src="assets/vendor/js/jquery.js"></script>
+    <script src="assets/vendor/js/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/js/util/autoPadding.js"></script>
+    <script src="assets/js/util/crossPlatform.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- endbuild -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Playfair+Display:400,500,700&display=swap">
+  </div>
 </body>
 
 </html>

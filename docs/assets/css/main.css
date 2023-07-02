@@ -4893,27 +4893,30 @@ nav .navbar-nav .nav-item .nav-link:hover {
           flex-direction: column;
   text-align: center;
   height: 100%;
+  opacity: .9;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px) !important;
 }
 
-/* line 60, src/assets/scss/components/_hex.scss */
+/* line 63, src/assets/scss/components/_hex.scss */
 .hex p {
   margin-bottom: 1.5rem;
 }
 
-/* line 62, src/assets/scss/components/_hex.scss */
+/* line 65, src/assets/scss/components/_hex.scss */
 .hex p:last-child {
   margin-bottom: 0;
 }
 
-/* line 67, src/assets/scss/components/_hex.scss */
+/* line 70, src/assets/scss/components/_hex.scss */
 .hex.dark {
-  background-color: #131E2D;
+  background-color: rgba(19, 30, 45, 0.9);
   color: #fff !important;
 }
 
-/* line 71, src/assets/scss/components/_hex.scss */
+/* line 75, src/assets/scss/components/_hex.scss */
 .hex.white {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   color: #131E2D !important;
 }
 
