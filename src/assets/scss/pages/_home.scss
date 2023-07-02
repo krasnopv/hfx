@@ -26,6 +26,16 @@ main {
   z-index: 999;
   top: 0;
 
-  #hero2 {
+  #about {
+    .container {
+      position: relative;
+      z-index: 999;
+    }
+
+    .container-two {
+      position: relative;
+      z-index: 9;
+      height: $hex-height-large * .75 - ($hex-height-large * .25 - $hex-height-mid * .25) + 10px;
+    }
   }
 }

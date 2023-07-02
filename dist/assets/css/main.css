@@ -1,3 +1,28 @@
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+.p-l-35 {
+  padding-left: 35px;
+}
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
+/* line 104, src/assets/scss/abstracts/_mixins.scss */
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -143,11 +168,18 @@ strong {
  * Add the correct background and color in IE 9-.
  */
 /* line 173, src/assets/scss/vendors/_normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
 
 /**
  * Add the correct font size in all browsers.
  */
 /* line 182, src/assets/scss/vendors/_normalize.scss */
+small {
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -468,6 +500,9 @@ strong {
 }
 
 /* line 161, node_modules/bootstrap/scss/_reboot.scss */
+small {
+  font-size: 80%;
+}
 
 /* line 170, node_modules/bootstrap/scss/_reboot.scss */
 
@@ -650,8 +685,18 @@ h2, .h2 {
 /* line 55, node_modules/bootstrap/scss/_type.scss */
 
 /* line 67, node_modules/bootstrap/scss/_type.scss */
+small,
+.small {
+  font-size: 0.875em;
+  font-weight: 400;
+}
 
 /* line 73, node_modules/bootstrap/scss/_type.scss */
+mark,
+.mark {
+  padding: 0.2em;
+  background-color: #fcf8e3;
+}
 
 /* line 84, node_modules/bootstrap/scss/_type.scss */
 
@@ -4821,60 +4866,60 @@ nav .navbar-nav .nav-item .nav-link:hover {
   font-size: 0.8125rem;
 }
 
-/* line 6, src/assets/scss/components/_hex.scss */
+/* line 1, src/assets/scss/components/_hex.scss */
 .hex-small {
   height: 550px;
 }
 
-/* line 9, src/assets/scss/components/_hex.scss */
+/* line 4, src/assets/scss/components/_hex.scss */
 .hex-small.hex-counter {
   height: 661px;
 }
 
-/* line 13, src/assets/scss/components/_hex.scss */
+/* line 8, src/assets/scss/components/_hex.scss */
 .hex-small .hex {
   position: absolute;
   padding: 0% 8%;
 }
 
-/* line 17, src/assets/scss/components/_hex.scss */
+/* line 12, src/assets/scss/components/_hex.scss */
 .hex-small .hex.left {
   left: 0;
 }
 
-/* line 21, src/assets/scss/components/_hex.scss */
+/* line 16, src/assets/scss/components/_hex.scss */
 .hex-small .hex.right {
   margin-top: -1142.5px;
   left: 0;
   margin-left: 0.5rem;
 }
 
-/* line 29, src/assets/scss/components/_hex.scss */
+/* line 24, src/assets/scss/components/_hex.scss */
 .hex-mid {
   height: 776px;
   padding: 0% 8%;
   margin-top: -184px;
 }
 
-/* line 34, src/assets/scss/components/_hex.scss */
+/* line 29, src/assets/scss/components/_hex.scss */
 .hex-mid .hex {
-  padding: 0% 4%;
+  padding: 0% 3.7%;
 }
 
-/* line 39, src/assets/scss/components/_hex.scss */
+/* line 34, src/assets/scss/components/_hex.scss */
 .hex-large {
   height: 1303px;
   padding: 0% 8%;
   margin-top: -315.75px;
 }
 
-/* line 44, src/assets/scss/components/_hex.scss */
+/* line 39, src/assets/scss/components/_hex.scss */
 .hex-large .hex {
   margin-left: -1150px;
   padding: 0% 10%;
 }
 
-/* line 50, src/assets/scss/components/_hex.scss */
+/* line 45, src/assets/scss/components/_hex.scss */
 .hex {
   -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
@@ -4898,25 +4943,30 @@ nav .navbar-nav .nav-item .nav-link:hover {
   -webkit-backdrop-filter: blur(20px) !important;
 }
 
-/* line 63, src/assets/scss/components/_hex.scss */
+/* line 58, src/assets/scss/components/_hex.scss */
 .hex p {
   margin-bottom: 1.5rem;
 }
 
-/* line 65, src/assets/scss/components/_hex.scss */
+/* line 60, src/assets/scss/components/_hex.scss */
 .hex p:last-child {
   margin-bottom: 0;
 }
 
-/* line 70, src/assets/scss/components/_hex.scss */
+/* line 65, src/assets/scss/components/_hex.scss */
+.hex button {
+  margin-top: 36px;
+}
+
+/* line 69, src/assets/scss/components/_hex.scss */
 .hex.dark {
-  background-color: rgba(19, 30, 45, 0.9);
+  background-color: #131E2D;
   color: #fff !important;
 }
 
-/* line 75, src/assets/scss/components/_hex.scss */
+/* line 74, src/assets/scss/components/_hex.scss */
 .hex.white {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
   color: #131E2D !important;
 }
 
@@ -4981,6 +5031,19 @@ main {
   position: relative !important;
   z-index: 999;
   top: 0;
+}
+
+/* line 30, src/assets/scss/pages/_home.scss */
+main #about .container {
+  position: relative;
+  z-index: 999;
+}
+
+/* line 35, src/assets/scss/pages/_home.scss */
+main #about .container-two {
+  position: relative;
+  z-index: 9;
+  height: 855.5px;
 }
 
 /* line 6, src/assets/scss/themes/_default.scss */
