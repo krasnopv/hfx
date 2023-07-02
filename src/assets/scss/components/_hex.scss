@@ -56,7 +56,10 @@ $hex-height-large: 1303px;
   flex-direction: column;
   text-align: center;
   height: 100%;
-  
+  opacity: .9;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px) !important;
+
   p {
     margin-bottom: 1.5rem;
     &:last-child {
@@ -65,11 +68,12 @@ $hex-height-large: 1303px;
   }
 
   &.dark {
-    background-color: $dark;
+    background-color: rgba($dark, .9);
+    // background-color: $dark;
     color: $white !important;
   }
   &.white {
-    background-color: $white;
+    background-color: rgba($white, .9);
     color: $dark !important;
   }
 }
