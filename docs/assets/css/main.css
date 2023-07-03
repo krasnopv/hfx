@@ -230,7 +230,9 @@ svg:not(:root) {
  * 2. Remove the margin in Firefox and Safari.
  */
 /* line 252, src/assets/scss/vendors/_normalize.scss */
-button {
+button,
+input,
+textarea {
   font-family: sans-serif;
   /* 1 */
   font-size: 100%;
@@ -246,7 +248,8 @@ button {
  * 1. Show the overflow in Edge.
  */
 /* line 268, src/assets/scss/vendors/_normalize.scss */
-button {
+button,
+input {
   /* 1 */
   overflow: visible;
 }
@@ -268,7 +271,8 @@ button {
  */
 /* line 289, src/assets/scss/vendors/_normalize.scss */
 button,
-html [type="button"] {
+html [type="button"],
+[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
 }
@@ -278,7 +282,8 @@ html [type="button"] {
  */
 /* line 300, src/assets/scss/vendors/_normalize.scss */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -288,7 +293,8 @@ button::-moz-focus-inner,
  */
 /* line 312, src/assets/scss/vendors/_normalize.scss */
 button:-moz-focusring,
-[type="button"]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -315,6 +321,9 @@ button:-moz-focusring,
  * Remove the default vertical scrollbar in IE.
  */
 /* line 359, src/assets/scss/vendors/_normalize.scss */
+textarea {
+  overflow: auto;
+}
 
 /**
  * 1. Add the correct box sizing in IE 10-.
@@ -572,8 +581,9 @@ button:focus:not(:focus-visible) {
 }
 
 /* line 319, node_modules/bootstrap/scss/_reboot.scss */
-
-button {
+input,
+button,
+textarea {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
@@ -581,7 +591,8 @@ button {
 }
 
 /* line 330, node_modules/bootstrap/scss/_reboot.scss */
-button {
+button,
+input {
   overflow: visible;
 }
 
@@ -599,19 +610,22 @@ button {
 
 /* line 358, node_modules/bootstrap/scss/_reboot.scss */
 button,
-[type="button"] {
+[type="button"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
 /* line 371, node_modules/bootstrap/scss/_reboot.scss */
 button:not(:disabled),
-[type="button"]:not(:disabled) {
+[type="button"]:not(:disabled),
+[type="submit"]:not(:disabled) {
   cursor: pointer;
 }
 
 /* line 378, node_modules/bootstrap/scss/_reboot.scss */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
@@ -619,6 +633,10 @@ button::-moz-focus-inner,
 /* line 386, node_modules/bootstrap/scss/_reboot.scss */
 
 /* line 393, node_modules/bootstrap/scss/_reboot.scss */
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
 
 /* line 399, node_modules/bootstrap/scss/_reboot.scss */
 
@@ -792,7 +810,7 @@ mark,
 /* line 59, node_modules/bootstrap/scss/_grid.scss */
 
 /* line 8, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
- .col-6, .col-12, .col-sm-3, .col-md-6, .col-md-12, .col-lg-12 {
+ .col-6, .col-12, .col-sm-3, .col-md-4, .col-md-6, .col-md-12, .col-lg-12, .col-xl-4 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -975,6 +993,12 @@ mark,
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
+  .col-md-4 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   .col-md-6 {
@@ -1093,6 +1117,12 @@ mark,
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
+  .col-xl-4 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
@@ -1316,20 +1346,84 @@ mark,
 /* line 179, node_modules/bootstrap/scss/_tables.scss */
 
 /* line 7, node_modules/bootstrap/scss/_forms.scss */
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
 
 @media (prefers-reduced-motion: reduce) {
   /* line 7, node_modules/bootstrap/scss/_forms.scss */
+  .form-control {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 /* line 28, node_modules/bootstrap/scss/_forms.scss */
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
 
 /* line 14, node_modules/bootstrap/scss/mixins/_forms.scss */
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #71716c;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(48, 48, 46, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(48, 48, 46, 0.25);
+}
 
 /* line 37, node_modules/bootstrap/scss/_forms.scss */
+.form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
 
 /* line 48, node_modules/bootstrap/scss/_forms.scss */
+.form-control:disabled {
+  background-color: #e4e4e4;
+  opacity: 1;
+}
 
 /* line 60, node_modules/bootstrap/scss/_forms.scss */
+input[type="date"].form-control,
+input[type="time"].form-control {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 
 /* line 67, node_modules/bootstrap/scss/_forms.scss */
 
@@ -1354,8 +1448,14 @@ mark,
 /* line 170, node_modules/bootstrap/scss/_forms.scss */
 
 /* line 176, node_modules/bootstrap/scss/_forms.scss */
+textarea.form-control {
+  height: auto;
+}
 
 /* line 185, node_modules/bootstrap/scss/_forms.scss */
+.form-group {
+  margin-bottom: 1rem;
+}
 
 /* line 189, node_modules/bootstrap/scss/_forms.scss */
 
@@ -1524,16 +1624,47 @@ mark,
 /* line 55, node_modules/bootstrap/scss/_buttons.scss */
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
+.btn-primary {
+  color: #fff;
+  background-color: #30302e;
+  border-color: #30302e;
+}
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+.btn-primary:hover {
+  color: #fff;
+  background-color: #1c1c1b;
+  border-color: #161615;
+}
 
 /* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-primary:focus {
+  color: #fff;
+  background-color: #1c1c1b;
+  border-color: #161615;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(79, 79, 77, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(79, 79, 77, 0.5);
+}
 
 /* line 32, node_modules/bootstrap/scss/mixins/_buttons.scss */
+ .btn-primary:disabled {
+  color: #fff;
+  background-color: #30302e;
+  border-color: #30302e;
+}
 
 /* line 43, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active {
+  color: #fff;
+  background-color: #161615;
+  border-color: #0f0f0f;
+}
 
 /* line 53, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(79, 79, 77, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(79, 79, 77, 0.5);
+}
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
 
@@ -1915,16 +2046,47 @@ mark,
 /* line 156, node_modules/bootstrap/scss/_button-group.scss */
 
 /* line 7, node_modules/bootstrap/scss/_input-group.scss */
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+}
 
 /* line 14, node_modules/bootstrap/scss/_input-group.scss */
+.input-group > .form-control {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+}
 
 /* line 24, node_modules/bootstrap/scss/_input-group.scss */
+.input-group > .form-control + .form-control {
+  margin-left: -1px;
+}
 
 /* line 32, node_modules/bootstrap/scss/_input-group.scss */
+.input-group > .form-control:focus {
+  z-index: 3;
+}
 
 /* line 39, node_modules/bootstrap/scss/_input-group.scss */
 
 /* line 45, node_modules/bootstrap/scss/_input-group.scss */
+.input-group > .form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
 
 /* line 50, node_modules/bootstrap/scss/_input-group.scss */
 
@@ -1933,22 +2095,70 @@ mark,
 /* line 56, node_modules/bootstrap/scss/_input-group.scss */
 
 /* line 60, node_modules/bootstrap/scss/_input-group.scss */
+.input-group:not(.has-validation) > .form-control:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
 
 /* line 69, node_modules/bootstrap/scss/_input-group.scss */
 
 /* line 85, node_modules/bootstrap/scss/_input-group.scss */
 
+.input-group-append {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* line 92, node_modules/bootstrap/scss/_input-group.scss */
+
+.input-group-append .btn {
+  position: relative;
+  z-index: 2;
+}
 
 /* line 96, node_modules/bootstrap/scss/_input-group.scss */
 
+.input-group-append .btn:focus {
+  z-index: 3;
+}
+
 /* line 101, node_modules/bootstrap/scss/_input-group.scss */
+
+.input-group-append .btn + .btn,
+.input-group-append .btn + .input-group-text,
+.input-group-append .input-group-text + .input-group-text,
+.input-group-append .input-group-text + .btn {
+  margin-left: -1px;
+}
 
 /* line 109, node_modules/bootstrap/scss/_input-group.scss */
 
 /* line 110, node_modules/bootstrap/scss/_input-group.scss */
+.input-group-append {
+  margin-left: -1px;
+}
 
 /* line 118, node_modules/bootstrap/scss/_input-group.scss */
+.input-group-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e4e4e4;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
 
 /* line 134, node_modules/bootstrap/scss/_input-group.scss */
 
@@ -1964,7 +2174,20 @@ mark,
 
 /* line 193, node_modules/bootstrap/scss/_input-group.scss */
 
+.input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn,
+.input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text,
+.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 /* line 204, node_modules/bootstrap/scss/_input-group.scss */
+.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
 
 /* line 10, node_modules/bootstrap/scss/_custom-forms.scss */
 
@@ -4866,6 +5089,20 @@ nav .navbar-nav .nav-item .nav-link:hover {
   font-size: 0.8125rem;
 }
 
+/* line 11, src/assets/scss/components/_button.scss */
+.hex.dark .btn {
+  background-color: #fff;
+  color: #131E2D;
+}
+
+/* line 1, src/assets/scss/components/_form.scss */
+.form-control, .form-control:focus {
+  background: #FFFFFF0F;
+  border-width: 0 0 1px;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+}
+
 /* line 1, src/assets/scss/components/_hex.scss */
 .hex-small {
   height: 550px;
@@ -4919,7 +5156,19 @@ nav .navbar-nav .nav-item .nav-link:hover {
   padding: 0% 10%;
 }
 
-/* line 45, src/assets/scss/components/_hex.scss */
+/* line 43, src/assets/scss/components/_hex.scss */
+.hex-large .hex.right {
+  position: relative;
+  top: -50%;
+  margin: auto;
+}
+
+/* line 50, src/assets/scss/components/_hex.scss */
+.hex-large:has(.right) {
+  padding: 0;
+}
+
+/* line 55, src/assets/scss/components/_hex.scss */
 .hex {
   -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
@@ -4943,28 +5192,28 @@ nav .navbar-nav .nav-item .nav-link:hover {
   -webkit-backdrop-filter: blur(20px) !important;
 }
 
-/* line 58, src/assets/scss/components/_hex.scss */
+/* line 68, src/assets/scss/components/_hex.scss */
 .hex p {
   margin-bottom: 1.5rem;
 }
 
-/* line 60, src/assets/scss/components/_hex.scss */
+/* line 70, src/assets/scss/components/_hex.scss */
 .hex p:last-child {
   margin-bottom: 0;
 }
 
-/* line 65, src/assets/scss/components/_hex.scss */
+/* line 75, src/assets/scss/components/_hex.scss */
 .hex button {
   margin-top: 36px;
 }
 
-/* line 69, src/assets/scss/components/_hex.scss */
+/* line 79, src/assets/scss/components/_hex.scss */
 .hex.dark {
   background-color: #131E2D;
   color: #fff !important;
 }
 
-/* line 74, src/assets/scss/components/_hex.scss */
+/* line 84, src/assets/scss/components/_hex.scss */
 .hex.white {
   background-color: rgba(255, 255, 255, 0.5);
   color: #131E2D !important;
@@ -5043,13 +5292,18 @@ main {
   top: 0;
 }
 
-/* line 30, src/assets/scss/pages/_home.scss */
+/* line 29, src/assets/scss/pages/_home.scss */
+main #about {
+  overflow: hidden;
+}
+
+/* line 31, src/assets/scss/pages/_home.scss */
 main #about .container {
   position: relative;
   z-index: 999;
 }
 
-/* line 35, src/assets/scss/pages/_home.scss */
+/* line 36, src/assets/scss/pages/_home.scss */
 main #about .container-two {
   position: relative;
   z-index: 9;
