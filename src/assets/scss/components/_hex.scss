@@ -39,6 +39,16 @@
   .hex {
     margin-left: 0 - map-get($container-max-widths , xl);
     padding: 0% 10%;
+
+    &.right {
+      position: relative;
+      top: -50%;
+      margin: auto;
+    }
+  }
+
+  &:has(.right) {
+    padding: 0;
   }
 }
 

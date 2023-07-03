@@ -4983,8 +4983,18 @@ nav .navbar-nav .nav-item .nav-link:hover {
   margin: auto;
 }
 
-/* line 1, src/assets/scss/components/_statistics.scss */
-.counter-txt {
+/* line 2, src/assets/scss/components/_statistics.scss */
+#counter .row {
+  padding: 0 35px;
+}
+
+/* line 5, src/assets/scss/components/_statistics.scss */
+#counter .row:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+/* line 9, src/assets/scss/components/_statistics.scss */
+#counter .row .counter-txt {
   text-align: center;
   font-size: 10px;
   font-weight: 700;
@@ -4993,14 +5003,14 @@ nav .navbar-nav .nav-item .nav-link:hover {
   line-height: 1.1;
 }
 
-/* line 10, src/assets/scss/components/_statistics.scss */
-.counter-txt .counter-value {
+/* line 17, src/assets/scss/components/_statistics.scss */
+#counter .row .counter-txt .counter-value {
   font-size: 4rem;
   font-weight: 700;
 }
 
-/* line 18, src/assets/scss/components/_statistics.scss */
-.counter-txt span {
+/* line 25, src/assets/scss/components/_statistics.scss */
+#counter .row .counter-txt span {
   display: block;
   font-size: 36px;
 }

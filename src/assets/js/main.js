@@ -1,8 +1,7 @@
 "use strict";
 
-// const hexDif = 0.8660254;
-
 $(document).ready(function () {
+  console.log('Loading...');
   $("body").autoPadding({
     source: $(".js-header"),
   });
@@ -11,11 +10,7 @@ $(document).ready(function () {
   $(window).scroll(function() {
 
     var oTop = $('#counter').offset().top - window.innerHeight;
-    // console.log(a);
-    // console.log(oTop);
-    // console.log($(window).scrollTop());
     if (a === 0 && $(window).scrollTop() > oTop) {
-      // console.log("Counting!");
       $('.counter-value').each(function() {
         var $this = $(this),
           countTo = $this.attr('data-count');
@@ -33,27 +28,30 @@ $(document).ready(function () {
             },
             complete: function() {
               $this.text(this.countNum);
-              //alert('finished');
             }
 
           });
       });
       a = 1;
     }
+
   });
 
   console.log("Ready!");
 });
 
 $(window).on("load", function () {
+  console.log('loading...');
   const navHeight = parseInt($("nav").css("height"));
   const sectionMarginTop = parseInt($("section").css("margin-top"));
   const navMarginTop = parseInt($("nav").css("margin-top"));
-  // $('.preloader').addClass('preloader-deactivate');
+
   $(".wrapper").removeClass("invisible");
   setTimeout(function () {
     $(".preloader").remove();
+    console.log('Preloader removed!');
   }, 500);
+
   const titleMarginTop =
     parseInt($("#hero2 h1").css("margin-bottom")) +
     parseInt($("#hero2 button").css("height"));
@@ -63,16 +61,11 @@ $(window).on("load", function () {
 
   console.log("Loaded!");
 
-  // function resize() {
-  //   console.log("height: ", window.innerHeight, "px");
-  //   console.log("width: ", window.innerWidth, "px");
-  // }
-  
-  // window.onresize = resize;
   const onResize = () => {
     $('.col-hex').each(function() {
-      console.log($(this).css("width"));
-      $(this).find(".hex").css({ "width": `${parseInt($(this).css("height")) * 0.8660254}` });
+      $(this).find(".hex").css({
+        "width": `${parseInt($(this).css("height")) * 0.8660254 + $(this).find(".hex").css('margin-top')}`
+      });
     });
   }
 
@@ -80,9 +73,5 @@ $(window).on("load", function () {
 
   $(window).resize(function() {
     onResize();
-    // $('.hex').each(function() {
-    //   console.log($(this).css("width"));
-    //   $(this).css({ "height": `${parseInt($(this).css("width")) / 0.8660254}` });
-    // });
   });
 });

@@ -1,22 +1,31 @@
-.counter-txt {
-  text-align: center;
-  font-size: 10px;
-  font-weight: $font-weight-bold;
-  text-transform: uppercase;
-  margin: 0;
-  line-height: 1.1;
-  
+#counter {
+  .row {
+    padding: 0 35px;
+    
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
 
-  .counter-value {
-    font-size: $h1-font-size;
-    font-weight: $font-weight-bold;
-  }
-  // @include media-breakpoint-down(sm) {
-  //   margin-top: 35px;
-  // }
+    .counter-txt {
+      text-align: center;
+      font-size: 10px;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1.1;
 
-  span {
-    display: block;
-    font-size: 36px;
+      .counter-value {
+        font-size: $h1-font-size;
+        font-weight: $font-weight-bold;
+      }
+      // @include media-breakpoint-down(sm) {
+      //   margin-top: 35px;
+      // }
+
+      span {
+        display: block;
+        font-size: 36px;
+      }
+    }
   }
 }

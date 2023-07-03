@@ -27,6 +27,7 @@ main {
   top: 0;
 
   #about {
+    overflow: hidden;
     .container {
       position: relative;
       z-index: 999;

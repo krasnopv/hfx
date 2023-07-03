@@ -6,3 +6,10 @@
   border-radius: $rounded-pill;
   font-size: $font-size-small;
 }
+
+.hex.dark {
+  .btn {
+    background-color: $white;
+    color: $dark;
+  }
+}
