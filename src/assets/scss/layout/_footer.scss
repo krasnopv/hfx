@@ -5,8 +5,12 @@
   background-color: $white;
   margin-bottom: $navbar-margin-top;
   z-index: 999;
-  h4 {
+  p {
     margin: 0;
     text-transform: none;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 10px;
+    }
   }
 }

@@ -468,7 +468,7 @@ body {
 /* line 76, node_modules/bootstrap/scss/_reboot.scss */
 
 /* line 92, node_modules/bootstrap/scss/_reboot.scss */
-h1, h2, h4 {
+h1, h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -665,8 +665,8 @@ textarea {
 /* line 482, node_modules/bootstrap/scss/_reboot.scss */
 
 /* line 7, node_modules/bootstrap/scss/_type.scss */
-h1, h2, h4,
-.h1, .h2, .h4 {
+h1, h2,
+.h1, .h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -685,9 +685,6 @@ h2, .h2 {
 /* line 18, node_modules/bootstrap/scss/_type.scss */
 
 /* line 19, node_modules/bootstrap/scss/_type.scss */
-h4, .h4 {
-  font-size: 0.9375rem;
-}
 
 /* line 20, node_modules/bootstrap/scss/_type.scss */
 
@@ -4192,17 +4189,9 @@ textarea.form-control {
 
 /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
-.py-1 {
-  padding-top: 0.25rem !important;
-}
-
 /* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
 /* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-.py-1 {
-  padding-bottom: 0.25rem !important;
-}
 
 /* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
@@ -4210,9 +4199,17 @@ textarea.form-control {
 
 /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
+.py-2 {
+  padding-top: 0.5rem !important;
+}
+
 /* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
 /* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+.py-2 {
+  padding-bottom: 0.5rem !important;
+}
 
 /* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
@@ -5040,15 +5037,15 @@ body {
 }
 
 /* line 30, src/assets/scss/base/_typography.scss */
-h1, h2, h4,
-.h1, .h2, .h4 {
+h1, h2,
+.h1, .h2 {
   margin-bottom: 28px;
 }
 
 @media (min-width: 992px) {
   /* line 30, src/assets/scss/base/_typography.scss */
-  h1, h2, h4,
-  .h1, .h2, .h4 {
+  h1, h2,
+  .h1, .h2 {
     margin-bottom: 36px;
   }
 }
@@ -5072,10 +5069,8 @@ p {
 /* line 63, src/assets/scss/base/_typography.scss */
 h1,
 h2,
-h4,
 .h1,
-.h2,
-.h4 {
+.h2 {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -5111,21 +5106,9 @@ h2,
 }
 
 /* line 131, src/assets/scss/base/_typography.scss */
-h4, .h4 {
-  color: #111111;
-  font-size: 0.875rem;
-  font-weight: 400;
-  letter-spacing: 0.05px;
-  line-height: 1.5rem;
-  text-transform: uppercase;
-}
 
 @media (min-width: 992px) {
   /* line 131, src/assets/scss/base/_typography.scss */
-  h4, .h4 {
-    font-size: 0.9375rem;
-    line-height: 1.5rem;
-  }
 }
 
 /* line 146, src/assets/scss/base/_typography.scss */
@@ -5274,9 +5257,16 @@ nav .navbar-collapse .close-nav {
 }
 
 /* line 8, src/assets/scss/layout/_footer.scss */
-.footer h4 {
+.footer p {
   margin: 0;
   text-transform: none;
+}
+
+@media (max-width: 575.98px) {
+  /* line 8, src/assets/scss/layout/_footer.scss */
+  .footer p {
+    font-size: 10px;
+  }
 }
 
 /* line 5, src/assets/scss/components/_button.scss */
@@ -5291,6 +5281,131 @@ nav .navbar-collapse .close-nav {
   color: #131E2D;
 }
 
+/*!
+ * Datepicker for Bootstrap v1.10.0 (https://github.com/uxsolutions/bootstrap-datepicker)
+ *
+ * Licensed under the Apache License v2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+ */
+/* line 7, src/assets/scss/components/_datepicker.scss */
+.datepicker {
+  padding: 4px;
+  border-radius: 4px;
+  direction: ltr;
+}
+
+/* line 14, src/assets/scss/components/_datepicker.scss */
+
+/* line 17, src/assets/scss/components/_datepicker.scss */
+
+/* line 20, src/assets/scss/components/_datepicker.scss */
+
+/* line 23, src/assets/scss/components/_datepicker.scss */
+
+/* line 26, src/assets/scss/components/_datepicker.scss */
+
+/* line 29, src/assets/scss/components/_datepicker.scss */
+
+/* line 33, src/assets/scss/components/_datepicker.scss */
+
+/* line 43, src/assets/scss/components/_datepicker.scss */
+
+/* line 52, src/assets/scss/components/_datepicker.scss */
+
+/* line 55, src/assets/scss/components/_datepicker.scss */
+
+/* line 58, src/assets/scss/components/_datepicker.scss */
+
+/* line 61, src/assets/scss/components/_datepicker.scss */
+
+/* line 64, src/assets/scss/components/_datepicker.scss */
+
+/* line 67, src/assets/scss/components/_datepicker.scss */
+
+/* line 70, src/assets/scss/components/_datepicker.scss */
+
+/* line 75, src/assets/scss/components/_datepicker.scss */
+
+/* line 80, src/assets/scss/components/_datepicker.scss */
+
+/* line 89, src/assets/scss/components/_datepicker.scss */
+
+/* line 99, src/assets/scss/components/_datepicker.scss */
+
+/* line 103, src/assets/scss/components/_datepicker.scss */
+
+/* line 108, src/assets/scss/components/_datepicker.scss */
+
+/* line 112, src/assets/scss/components/_datepicker.scss */
+
+/* line 118, src/assets/scss/components/_datepicker.scss */
+
+/* line 122, src/assets/scss/components/_datepicker.scss */
+
+/* line 140, src/assets/scss/components/_datepicker.scss */
+
+/* line 162, src/assets/scss/components/_datepicker.scss */
+
+/* line 172, src/assets/scss/components/_datepicker.scss */
+
+/* line 175, src/assets/scss/components/_datepicker.scss */
+
+/* line 178, src/assets/scss/components/_datepicker.scss */
+
+/* line 187, src/assets/scss/components/_datepicker.scss */
+
+/* line 207, src/assets/scss/components/_datepicker.scss */
+
+/* line 229, src/assets/scss/components/_datepicker.scss */
+
+/* line 239, src/assets/scss/components/_datepicker.scss */
+
+/* line 258, src/assets/scss/components/_datepicker.scss */
+
+/* line 280, src/assets/scss/components/_datepicker.scss */
+
+/* line 290, src/assets/scss/components/_datepicker.scss */
+
+/* line 309, src/assets/scss/components/_datepicker.scss */
+
+/* line 331, src/assets/scss/components/_datepicker.scss */
+
+/* line 341, src/assets/scss/components/_datepicker.scss */
+
+/* line 353, src/assets/scss/components/_datepicker.scss */
+
+/* line 357, src/assets/scss/components/_datepicker.scss */
+
+/* line 363, src/assets/scss/components/_datepicker.scss */
+
+/* line 382, src/assets/scss/components/_datepicker.scss */
+
+/* line 404, src/assets/scss/components/_datepicker.scss */
+
+/* line 414, src/assets/scss/components/_datepicker.scss */
+
+/* line 418, src/assets/scss/components/_datepicker.scss */
+
+/* line 421, src/assets/scss/components/_datepicker.scss */
+
+/* line 427, src/assets/scss/components/_datepicker.scss */
+
+/* line 433, src/assets/scss/components/_datepicker.scss */
+
+/* line 437, src/assets/scss/components/_datepicker.scss */
+
+/* line 443, src/assets/scss/components/_datepicker.scss */
+
+/* line 447, src/assets/scss/components/_datepicker.scss */
+
+/* line 451, src/assets/scss/components/_datepicker.scss */
+
+/* line 454, src/assets/scss/components/_datepicker.scss */
+
+/* line 459, src/assets/scss/components/_datepicker.scss */
+
+/* line 464, src/assets/scss/components/_datepicker.scss */
+
+/*# sourceMappingURL=bootstrap-datepicker.css.map */
 /* line 1, src/assets/scss/components/_form.scss */
 .form-control, .form-control:focus {
   background: #FFFFFF0F;
@@ -5470,7 +5585,7 @@ nav .navbar-collapse .close-nav {
   position: absolute;
 }
 
-/* line 20, src/assets/scss/pages/_home.scss */
+/* line 15, src/assets/scss/pages/_home.scss */
 #hero .overlay {
   background-color: #000000;
   opacity: 40%;
@@ -5480,42 +5595,42 @@ nav .navbar-collapse .close-nav {
   top: 0;
 }
 
-/* line 30, src/assets/scss/pages/_home.scss */
+/* line 25, src/assets/scss/pages/_home.scss */
 #about {
   overflow: hidden;
 }
 
-/* line 32, src/assets/scss/pages/_home.scss */
+/* line 27, src/assets/scss/pages/_home.scss */
 #about .container {
   position: relative;
   z-index: 999;
 }
 
-/* line 37, src/assets/scss/pages/_home.scss */
+/* line 32, src/assets/scss/pages/_home.scss */
 #about .container-two {
   position: relative;
   z-index: 9;
   height: 855.5px;
 }
 
-/* line 45, src/assets/scss/pages/_home.scss */
+/* line 40, src/assets/scss/pages/_home.scss */
 #about-copy {
   margin-top: -184px;
 }
 
-/* line 49, src/assets/scss/pages/_home.scss */
+/* line 44, src/assets/scss/pages/_home.scss */
 #services,
 #benefits-section,
 #get-started-section {
   margin-top: -315.75px;
 }
 
-/* line 56, src/assets/scss/pages/_home.scss */
+/* line 51, src/assets/scss/pages/_home.scss */
 #bid-request {
   margin-top: -967.25px;
 }
 
-/* line 60, src/assets/scss/pages/_home.scss */
+/* line 55, src/assets/scss/pages/_home.scss */
 #services {
   height: 1303px;
 }

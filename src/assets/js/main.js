@@ -80,6 +80,16 @@ $(document).ready(function () {
 
 $(window).on("load", function () {
   console.log('loading...');
+
+  $(function () {
+    $('.datepicker').datepicker({
+      language: "es",
+      autoclose: true,
+      format: "dd/mm/yyyy"
+    });
+  });
+  
+
   const navHeight = parseInt($("nav").css("height"));
   const sectionMarginTop = parseInt($("section").css("margin-top"));
   const navMarginTop = parseInt($("nav").css("margin-top"));

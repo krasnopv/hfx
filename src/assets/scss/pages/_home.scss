@@ -10,11 +10,6 @@
 
   video {
     position: absolute;
-
-    @include media-breakpoint-down(md) {
-      // height: 100vh;
-      // width: auto;
-    }
   }
 
   .overlay {
