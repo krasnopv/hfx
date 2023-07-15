@@ -15552,14 +15552,15 @@ nav .navbar-collapse .close-nav {
 .hex-large .hex.right {
   position: relative;
   margin: auto;
+  margin-left: 0.5rem;
 }
 
-/* line 50, src/assets/scss/components/_hex.scss */
+/* line 51, src/assets/scss/components/_hex.scss */
 .hex-large:has(.right) {
   padding: 0;
 }
 
-/* line 55, src/assets/scss/components/_hex.scss */
+/* line 56, src/assets/scss/components/_hex.scss */
 .hex {
   -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
   clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
@@ -15583,28 +15584,28 @@ nav .navbar-collapse .close-nav {
   -webkit-backdrop-filter: blur(20px) !important;
 }
 
-/* line 68, src/assets/scss/components/_hex.scss */
+/* line 69, src/assets/scss/components/_hex.scss */
 .hex p {
   margin-bottom: 1.5rem;
 }
 
-/* line 70, src/assets/scss/components/_hex.scss */
+/* line 71, src/assets/scss/components/_hex.scss */
 .hex p:last-child {
   margin-bottom: 0;
 }
 
-/* line 75, src/assets/scss/components/_hex.scss */
+/* line 76, src/assets/scss/components/_hex.scss */
 .hex button {
   margin-top: 36px;
 }
 
-/* line 79, src/assets/scss/components/_hex.scss */
+/* line 80, src/assets/scss/components/_hex.scss */
 .hex.dark {
   background-color: #131E2D;
   color: #fff !important;
 }
 
-/* line 84, src/assets/scss/components/_hex.scss */
+/* line 85, src/assets/scss/components/_hex.scss */
 .hex.white {
   background-color: rgba(255, 255, 255, 0.5);
   color: #131E2D !important;
