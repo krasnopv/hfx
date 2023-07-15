@@ -102,7 +102,7 @@ function jsVendor() {
       'node_modules/jquery/dist/jquery.js',
       'node_modules/popper.js/dist/umd/popper.js',
       'node_modules/bootstrap/dist/js/bootstrap.js',
-      'node_modules/bootstrap-datepicker/js/bootstrap-datepicker.js',
+      // 'node_modules/bootstrap-datepicker/js/bootstrap-datepicker.js',
     ])
     .pipe(dest('dist/assets/vendor/js'))
     .pipe(browserSync.stream());
