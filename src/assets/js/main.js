@@ -8,7 +8,6 @@ $(document).ready(function () {
 
   var a = 0;
   $(window).scroll(function() {
-
     var oTop = $('#counter').offset().top - window.innerHeight;
     if (a === 0 && $(window).scrollTop() > oTop) {
       $('.counter-value').each(function() {
@@ -34,8 +33,12 @@ $(document).ready(function () {
       });
       a = 1;
     }
-
   });
+
+  $('.close-nav').on( "click", () => {
+    $('.navbar-collapse').css({'right': '-30vw'});
+    $('.navbar-collapse').removeClass('show');
+  })
 
   console.log("Ready!");
 });

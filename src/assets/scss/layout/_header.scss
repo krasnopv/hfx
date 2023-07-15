@@ -20,19 +20,65 @@ nav {
     }
   }
 
-  .navbar-nav {
-    .nav-item {
-      margin-right: 1rem;
-      transition: ease-in-out 0.3s;
-      .nav-link {
-        border-radius: 50rem;
-        padding: 0.5rem 1rem !important;
-        font-size: $h3-font-size - $h6-font-size;
-        color: $white;
-        transition: 0.3s;
-        &:hover {
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-collapse {
+    transition: right 500ms ease-in-out;
+
+    .navbar-nav {
+      .nav-item {
+        margin-right: 1rem;
+        transition: ease-in-out 0.3s;
+
+        .nav-link {
+          border-radius: 50rem;
+          padding: 0.5rem 1rem !important;
+          font-size: $h3-font-size - $h6-font-size;
           color: $white;
-          background-color: $dark;
+          transition: 0.3s;
+
+          &:hover {
+            color: $white;
+            background-color: $dark;
+          }
+        }
+      }
+    }
+    
+    &.show {
+      right: 0 !important;
+    }
+
+    .close-nav {
+      top: 1rem;
+      right: 1rem;
+      border: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: block !important;
+      position: fixed;
+      height: 100vh;
+      width: 30vw;
+      right: -30vw;
+      top: 0;
+      background-color: $dark;
+      color: $white;
+      margin-top:  0 - $navbar-margin-top;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .navbar-nav {
+      @include media-breakpoint-down(md) {
+        align-items: center;
+      }
+
+      .nav-item {
+        @include media-breakpoint-down(md) {
+          margin: 0 0 1rem;
         }
       }
     }

@@ -9,7 +9,7 @@
   video {
     width: 100%;
   }
-  
+
   .overlay {
     background-color: #000000;
     opacity: 40%;
@@ -20,23 +20,36 @@
   }
 }
 
-main {
-  // margin-top: calc($logo-size + $navbar-brand-padding-y + $navbar-padding-y + $navbar-margin-top);
-  position: relative !important;
-  z-index: 999;
-  top: 0;
-
-  #about {
-    overflow: hidden;
-    .container {
-      position: relative;
-      z-index: 999;
-    }
-
-    .container-two {
-      position: relative;
-      z-index: 9;
-      height: $hex-height-large * .75 - ($hex-height-large * .25 - $hex-height-mid * .25) + 10px;
-    }
+#about {
+  overflow: hidden;
+  .container {
+    position: relative;
+    z-index: 999;
   }
+
+  .container-two {
+    position: relative;
+    z-index: 9;
+    height: $hex-height-large * 0.75 -
+      ($hex-height-large * 0.25 - $hex-height-mid * 0.25) + 10px;
+  }
+}
+
+#about-copy {
+  margin-top: 0 - $hex-height-mid / 4 + 10px;
+}
+
+#services,
+#benefits-section,
+#get-started-section,
+#get-started-form {
+  margin-top: 0 - $hex-height-large / 4 + 10px;
+}
+
+#bid-request {
+  margin-top: 0 - $hex-height-large * 0.75 + 10px;
+}
+
+#services {
+  height: $hex-height-large;
 }

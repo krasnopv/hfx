@@ -24,7 +24,7 @@
 .hex-mid {
   height: $hex-height-mid;
   padding: 0% 8%;
-  margin-top: 0 - $hex-height-mid / 4 + 10px;
+  // margin-top: 0 - $hex-height-mid / 4 + 10px;
 
   .hex {
     padding: 0% 3.7%;
@@ -34,7 +34,7 @@
 .hex-large {
   height: $hex-height-large;
   padding: 0% 8%;
-  margin-top: 0 - $hex-height-large / 4 + 10px;
+  // margin-top: 0 - $hex-height-large / 4 + 10px;
 
   .hex {
     margin-left: 0 - map-get($container-max-widths , xl);
@@ -42,7 +42,7 @@
 
     &.right {
       position: relative;
-      top: -50%;
+      // top: -50%;
       margin: auto;
     }
   }

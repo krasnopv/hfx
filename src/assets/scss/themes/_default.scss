@@ -5,4 +5,11 @@
 
 body {
   font-family: $font-family-default !important;
+
+  main {
+    overflow-x: hidden;
+    position: relative !important;
+    z-index: 999;
+    top: 0;  
+  }
 }

@@ -2,5 +2,10 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .footer {
-    border-top: 1px solid $gray-100
+  background-color: $white;
+  margin-bottom: $navbar-margin-top;
+  z-index: 999;
+  p {
+    margin: 0;
+  }
 }

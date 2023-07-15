@@ -423,7 +423,7 @@ textarea {
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
+  --breakpoint-lg: 992px;
   --breakpoint-xl: 1280px;
   --breakpoint-xxl: 1440px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -780,7 +780,7 @@ mark,
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 20, node_modules/bootstrap/scss/_grid.scss */
   .container {
     max-width: 100%;
@@ -810,7 +810,7 @@ mark,
 /* line 59, node_modules/bootstrap/scss/_grid.scss */
 
 /* line 8, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
- .col-6, .col-12, .col-sm-3, .col-md-4, .col-md-6, .col-md-12, .col-lg-12, .col-xl-4 {
+ .col-6, .col-12, .col-sm-3, .col-sm-6, .col-md-4, .col-md-6, .col-md-12, .col-lg-4, .col-lg-12, .col-xl-4 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -945,6 +945,12 @@ mark,
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
+  .col-sm-6 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
@@ -1048,7 +1054,7 @@ mark,
   /* line 72, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 34, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 65, node_modules/bootstrap/scss/mixins/_grid.scss */
   /* line 65, node_modules/bootstrap/scss/mixins/_grid.scss */
@@ -1061,6 +1067,12 @@ mark,
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
+  .col-lg-4 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
   /* line 54, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
@@ -1326,7 +1338,7 @@ mark,
   /* line 179, node_modules/bootstrap/scss/_tables.scss */
 }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 991.98px) {
   /* line 171, node_modules/bootstrap/scss/_tables.scss */
   /* line 179, node_modules/bootstrap/scss/_tables.scss */
 }
@@ -1854,16 +1866,42 @@ textarea.form-control {
 /* line 92, node_modules/bootstrap/scss/mixins/_buttons.scss */
 
 /* line 72, node_modules/bootstrap/scss/_buttons.scss */
+.btn-outline-light {
+  color: #f7f7f7;
+  border-color: #f7f7f7;
+}
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+.btn-outline-light:hover {
+  color: #30302e;
+  background-color: #f7f7f7;
+  border-color: #f7f7f7;
+}
 
 /* line 74, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-outline-light:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(247, 247, 247, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(247, 247, 247, 0.5);
+}
 
 /* line 79, node_modules/bootstrap/scss/mixins/_buttons.scss */
+ .btn-outline-light:disabled {
+  color: #f7f7f7;
+  background-color: transparent;
+}
 
 /* line 85, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active {
+  color: #30302e;
+  background-color: #f7f7f7;
+  border-color: #f7f7f7;
+}
 
 /* line 92, node_modules/bootstrap/scss/mixins/_buttons.scss */
+.btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(247, 247, 247, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(247, 247, 247, 0.5);
+}
 
 /* line 72, node_modules/bootstrap/scss/_buttons.scss */
 
@@ -1944,7 +1982,7 @@ textarea.form-control {
   /* line 47, node_modules/bootstrap/scss/_dropdown.scss */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 42, node_modules/bootstrap/scss/_dropdown.scss */
   /* line 47, node_modules/bootstrap/scss/_dropdown.scss */
 }
@@ -2476,10 +2514,29 @@ textarea.form-control {
 }
 
 /* line 118, node_modules/bootstrap/scss/_navbar.scss */
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+.navbar-toggler:hover, .navbar-toggler:focus {
+  text-decoration: none;
+}
 
 /* line 133, node_modules/bootstrap/scss/_navbar.scss */
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: 50% / 100% 100% no-repeat;
+}
 
 /* line 142, node_modules/bootstrap/scss/_navbar.scss */
 
@@ -2513,7 +2570,7 @@ textarea.form-control {
   /* line 217, node_modules/bootstrap/scss/_navbar.scss */
 }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 991.98px) {
   /* line 156, node_modules/bootstrap/scss/_navbar.scss */
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
@@ -2522,7 +2579,7 @@ textarea.form-control {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 154, node_modules/bootstrap/scss/_navbar.scss */
   .navbar-expand-lg {
     -webkit-box-orient: horizontal;
@@ -2562,6 +2619,9 @@ textarea.form-control {
         flex-basis: auto;
   }
   /* line 217, node_modules/bootstrap/scss/_navbar.scss */
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
 }
 
 @media (max-width: 1279.98px) {
@@ -2664,8 +2724,15 @@ textarea.form-control {
 }
 
 /* line 313, node_modules/bootstrap/scss/_navbar.scss */
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
 
 /* line 318, node_modules/bootstrap/scss/_navbar.scss */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
 /* line 322, node_modules/bootstrap/scss/_navbar.scss */
 
@@ -3013,7 +3080,7 @@ textarea.form-control {
   /* line 118, node_modules/bootstrap/scss/_list-group.scss */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 96, node_modules/bootstrap/scss/_list-group.scss */
   /* line 100, node_modules/bootstrap/scss/_list-group.scss */
   /* line 105, node_modules/bootstrap/scss/_list-group.scss */
@@ -3185,7 +3252,7 @@ textarea.form-control {
   /* line 228, node_modules/bootstrap/scss/_modal.scss */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 232, node_modules/bootstrap/scss/_modal.scss */
 }
 
@@ -3495,6 +3562,9 @@ textarea.form-control {
 /* line 2, node_modules/bootstrap/scss/mixins/_clearfix.scss */
 
 /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
+.d-none {
+  display: none !important;
+}
 
 /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
 
@@ -3544,11 +3614,17 @@ textarea.form-control {
   /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
+  /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
+  .d-lg-none {
+    display: none !important;
+  }
   /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
-  /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
+  .d-lg-block {
+    display: block !important;
+  }
   /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
@@ -3769,7 +3845,7 @@ textarea.form-control {
   /* line 49, node_modules/bootstrap/scss/utilities/_flex.scss */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 11, node_modules/bootstrap/scss/utilities/_flex.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_flex.scss */
   /* line 13, node_modules/bootstrap/scss/utilities/_flex.scss */
@@ -3898,7 +3974,7 @@ textarea.form-control {
   /* line 9, node_modules/bootstrap/scss/utilities/_float.scss */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 7, node_modules/bootstrap/scss/utilities/_float.scss */
   /* line 8, node_modules/bootstrap/scss/utilities/_float.scss */
   /* line 9, node_modules/bootstrap/scss/utilities/_float.scss */
@@ -3931,6 +4007,9 @@ textarea.form-control {
 /* line 5, node_modules/bootstrap/scss/utilities/_position.scss */
 
 /* line 5, node_modules/bootstrap/scss/utilities/_position.scss */
+.position-absolute {
+  position: absolute !important;
+}
 
 /* line 5, node_modules/bootstrap/scss/utilities/_position.scss */
 .position-fixed {
@@ -3940,16 +4019,25 @@ textarea.form-control {
 /* line 5, node_modules/bootstrap/scss/utilities/_position.scss */
 
 /* line 10, node_modules/bootstrap/scss/utilities/_position.scss */
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
 
 /* line 18, node_modules/bootstrap/scss/utilities/_position.scss */
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+}
 
 @supports (position: sticky) {
   /* line 26, node_modules/bootstrap/scss/utilities/_position.scss */
-  .sticky-top {
-    position: sticky;
-    top: 0;
-    z-index: 1020;
-  }
 }
 
 /* line 5, node_modules/bootstrap/scss/utilities/_screenreaders.scss */
@@ -4090,56 +4178,62 @@ textarea.form-control {
 /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
 /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
-
-/* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
-.pt-5 {
-  padding-top: 3rem !important;
+.pt-1 {
+  padding-top: 0.25rem !important;
 }
 
 /* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
 /* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
-.pb-5 {
-  padding-bottom: 3rem !important;
+.pb-1 {
+  padding-bottom: 0.25rem !important;
 }
+
+/* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
+/* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
+.pb-4 {
+  padding-bottom: 1.5rem !important;
+}
+
+/* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
+
+/* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
 /* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
@@ -4392,7 +4486,7 @@ textarea.form-control {
   /* line 68, node_modules/bootstrap/scss/utilities/_spacing.scss */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
@@ -4710,7 +4804,7 @@ textarea.form-control {
   /* line 24, node_modules/bootstrap/scss/utilities/_text.scss */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 22, node_modules/bootstrap/scss/utilities/_text.scss */
   /* line 23, node_modules/bootstrap/scss/utilities/_text.scss */
   /* line 24, node_modules/bootstrap/scss/utilities/_text.scss */
@@ -4783,14 +4877,8 @@ textarea.form-control {
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 
 /* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
-.text-dark {
-  color: #131E2D !important;
-}
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-a.text-dark:hover, a.text-dark:focus {
-  color: black !important;
-}
 
 /* line 51, node_modules/bootstrap/scss/utilities/_text.scss */
 
@@ -4851,11 +4939,11 @@ a.text-dark:hover, a.text-dark:focus {
   }
   /* line 83, node_modules/bootstrap/scss/_print.scss */
   body {
-    min-width: 1024px !important;
+    min-width: 992px !important;
   }
   /* line 86, node_modules/bootstrap/scss/_print.scss */
   .container {
-    min-width: 1024px !important;
+    min-width: 992px !important;
   }
   /* line 91, node_modules/bootstrap/scss/_print.scss */
   .navbar {
@@ -4898,7 +4986,7 @@ html {
  */
 /* line 27, src/assets/scss/base/_base.scss */
 a {
-  color: #f05555;
+  color: #131E2D;
   text-decoration: none;
 }
 
@@ -4919,7 +5007,7 @@ body {
   color: #30302e;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 16, src/assets/scss/base/_typography.scss */
   body {
     font-size: 1rem;
@@ -4932,7 +5020,7 @@ h1, h2,
   margin-bottom: 28px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 30, src/assets/scss/base/_typography.scss */
   h1, h2,
   .h1, .h2 {
@@ -4947,7 +5035,7 @@ p {
   margin-bottom: 28px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 49, src/assets/scss/base/_typography.scss */
   
   ul,
@@ -4977,7 +5065,7 @@ h2,
   letter-spacing: 0.13px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 81, src/assets/scss/base/_typography.scss */
   h1,
   .h1,
@@ -4991,25 +5079,25 @@ h2,
 
 /* line 115, src/assets/scss/base/_typography.scss */
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 115, src/assets/scss/base/_typography.scss */
 }
 
 /* line 131, src/assets/scss/base/_typography.scss */
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 131, src/assets/scss/base/_typography.scss */
 }
 
 /* line 146, src/assets/scss/base/_typography.scss */
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 146, src/assets/scss/base/_typography.scss */
 }
 
 /* line 161, src/assets/scss/base/_typography.scss */
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   /* line 161, src/assets/scss/base/_typography.scss */
 }
 
@@ -5053,15 +5141,26 @@ nav .navbar-brand img {
   width: 100%;
 }
 
-/* line 24, src/assets/scss/layout/_header.scss */
-nav .navbar-nav .nav-item {
+/* line 23, src/assets/scss/layout/_header.scss */
+nav .navbar-toggler {
+  border: none;
+}
+
+/* line 27, src/assets/scss/layout/_header.scss */
+nav .navbar-collapse {
+  -webkit-transition: right 500ms ease-in-out;
+  transition: right 500ms ease-in-out;
+}
+
+/* line 31, src/assets/scss/layout/_header.scss */
+nav .navbar-collapse .navbar-nav .nav-item {
   margin-right: 1rem;
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
 }
 
-/* line 27, src/assets/scss/layout/_header.scss */
-nav .navbar-nav .nav-item .nav-link {
+/* line 35, src/assets/scss/layout/_header.scss */
+nav .navbar-collapse .navbar-nav .nav-item .nav-link {
   border-radius: 50rem;
   padding: 0.5rem 1rem !important;
   font-size: 0.8125rem;
@@ -5070,17 +5169,66 @@ nav .navbar-nav .nav-item .nav-link {
   transition: 0.3s;
 }
 
-/* line 33, src/assets/scss/layout/_header.scss */
-nav .navbar-nav .nav-item .nav-link:hover {
+/* line 42, src/assets/scss/layout/_header.scss */
+nav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
   color: #fff;
   background-color: #131E2D;
 }
 
-/* line 42, src/assets/scss/layout/_header.scss */
+/* line 50, src/assets/scss/layout/_header.scss */
+
+/* line 54, src/assets/scss/layout/_header.scss */
+nav .navbar-collapse .close-nav {
+  top: 1rem;
+  right: 1rem;
+  border: none;
+}
+
+@media (max-width: 991.98px) {
+  /* line 27, src/assets/scss/layout/_header.scss */
+  nav .navbar-collapse {
+    display: block !important;
+    position: fixed;
+    height: 100vh;
+    width: 30vw;
+    right: -30vw;
+    top: 0;
+    background-color: #131E2D;
+    color: #fff;
+    margin-top: -1.5rem;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* line 74, src/assets/scss/layout/_header.scss */
+  nav .navbar-collapse .navbar-nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* line 79, src/assets/scss/layout/_header.scss */
+  nav .navbar-collapse .navbar-nav .nav-item {
+    margin: 0 0 1rem;
+  }
+}
+
+/* line 88, src/assets/scss/layout/_header.scss */
 
 /* line 4, src/assets/scss/layout/_footer.scss */
 .footer {
-  border-top: 1px solid #f7f7f7;
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+  z-index: 999;
+}
+
+/* line 8, src/assets/scss/layout/_footer.scss */
+.footer p {
+  margin: 0;
 }
 
 /* line 5, src/assets/scss/components/_button.scss */
@@ -5135,7 +5283,6 @@ nav .navbar-nav .nav-item .nav-link:hover {
 .hex-mid {
   height: 776px;
   padding: 0% 8%;
-  margin-top: -184px;
 }
 
 /* line 29, src/assets/scss/components/_hex.scss */
@@ -5147,7 +5294,6 @@ nav .navbar-nav .nav-item .nav-link:hover {
 .hex-large {
   height: 1303px;
   padding: 0% 8%;
-  margin-top: -315.75px;
 }
 
 /* line 39, src/assets/scss/components/_hex.scss */
@@ -5159,7 +5305,6 @@ nav .navbar-nav .nav-item .nav-link:hover {
 /* line 43, src/assets/scss/components/_hex.scss */
 .hex-large .hex.right {
   position: relative;
-  top: -50%;
   margin: auto;
 }
 
@@ -5286,33 +5431,56 @@ nav .navbar-nav .nav-item .nav-link:hover {
 }
 
 /* line 23, src/assets/scss/pages/_home.scss */
-main {
-  position: relative !important;
-  z-index: 999;
-  top: 0;
-}
-
-/* line 29, src/assets/scss/pages/_home.scss */
-main #about {
+#about {
   overflow: hidden;
 }
 
-/* line 31, src/assets/scss/pages/_home.scss */
-main #about .container {
+/* line 25, src/assets/scss/pages/_home.scss */
+#about .container {
   position: relative;
   z-index: 999;
 }
 
-/* line 36, src/assets/scss/pages/_home.scss */
-main #about .container-two {
+/* line 30, src/assets/scss/pages/_home.scss */
+#about .container-two {
   position: relative;
   z-index: 9;
   height: 855.5px;
 }
 
+/* line 38, src/assets/scss/pages/_home.scss */
+#about-copy {
+  margin-top: -184px;
+}
+
+/* line 42, src/assets/scss/pages/_home.scss */
+#services,
+#benefits-section,
+#get-started-section {
+  margin-top: -315.75px;
+}
+
+/* line 49, src/assets/scss/pages/_home.scss */
+#bid-request {
+  margin-top: -967.25px;
+}
+
+/* line 53, src/assets/scss/pages/_home.scss */
+#services {
+  height: 1303px;
+}
+
 /* line 6, src/assets/scss/themes/_default.scss */
 body {
   font-family: "Montserrat", sans-serif !important;
+}
+
+/* line 9, src/assets/scss/themes/_default.scss */
+body main {
+  overflow-x: hidden;
+  position: relative !important;
+  z-index: 999;
+  top: 0;
 }
 
 /*# sourceMappingURL=../../../scss */
