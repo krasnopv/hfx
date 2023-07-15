@@ -52,17 +52,12 @@ $(document).ready(function () {
         "width": "" + (parseInt($(this).css("height")) * 0.8660254 + $(this).find(".hex").css('margin-top'))
       });
     });
-    console.log(windowRatio);
-    console.log(videoRatio);
-    console.log('------------------------------------');
     if (windowRatio >= videoRatio) {
       video.css({
         'width': '100%',
         'heigh': 'auto'
       });
-      console.log('windowRatio >= videoRatio');
     } else {
-      console.log('windowRatio < videoRatio');
       video.css({
         'width': 'auto',
         'heigh': '100vh',
@@ -115,17 +110,12 @@ $(window).on("load", function () {
         "width": "" + (parseInt($(this).css("height")) * 0.8660254 + $(this).find(".hex").css('margin-top'))
       });
     });
-    console.log(windowRatio);
-    console.log(videoRatio);
-    console.log('------------------------------------');
     if (windowRatio >= videoRatio) {
       video.css({
         'width': '100%',
         'heigh': 'auto'
       });
-      console.log('windowRatio >= videoRatio');
     } else {
-      console.log('windowRatio < videoRatio');
       video.css({
         'width': 'auto',
         'heigh': '100vh',

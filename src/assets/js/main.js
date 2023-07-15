@@ -57,15 +57,9 @@ $(document).ready(function () {
       });
     });
 
-    console.log(windowRatio);
-    console.log(videoRatio);
-    console.log('------------------------------------');
-
     if (windowRatio >= videoRatio) {
       video.css({'width': '100%', 'heigh': 'auto'});
-      console.log('windowRatio >= videoRatio');
     } else {
-      console.log('windowRatio < videoRatio');
       video.css({'width': 'auto', 'heigh': '100vh', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)'});
     }
   }
@@ -122,15 +116,9 @@ $(window).on("load", function () {
       });
     });
 
-    console.log(windowRatio);
-    console.log(videoRatio);
-    console.log('------------------------------------');
-
     if (windowRatio >= videoRatio) {
       video.css({'width': '100%', 'heigh': 'auto'});
-      console.log('windowRatio >= videoRatio');
     } else {
-      console.log('windowRatio < videoRatio');
       video.css({'width': 'auto', 'heigh': '100vh', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)'});
     }
   }
