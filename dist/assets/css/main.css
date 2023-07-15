@@ -468,7 +468,7 @@ body {
 /* line 76, node_modules/bootstrap/scss/_reboot.scss */
 
 /* line 92, node_modules/bootstrap/scss/_reboot.scss */
-h1, h2 {
+h1, h2, h4 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -665,8 +665,8 @@ textarea {
 /* line 482, node_modules/bootstrap/scss/_reboot.scss */
 
 /* line 7, node_modules/bootstrap/scss/_type.scss */
-h1, h2,
-.h1, .h2 {
+h1, h2, h4,
+.h1, .h2, .h4 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -685,6 +685,9 @@ h2, .h2 {
 /* line 18, node_modules/bootstrap/scss/_type.scss */
 
 /* line 19, node_modules/bootstrap/scss/_type.scss */
+h4, .h4 {
+  font-size: 0.9375rem;
+}
 
 /* line 20, node_modules/bootstrap/scss/_type.scss */
 
@@ -3752,6 +3755,10 @@ textarea.form-control {
 /* line 38, node_modules/bootstrap/scss/utilities/_flex.scss */
 
 /* line 39, node_modules/bootstrap/scss/utilities/_flex.scss */
+.align-content-center {
+  -ms-flex-line-pack: center !important;
+      align-content: center !important;
+}
 
 /* line 40, node_modules/bootstrap/scss/utilities/_flex.scss */
 
@@ -4072,6 +4079,9 @@ textarea.form-control {
 /* line 7, node_modules/bootstrap/scss/utilities/_sizing.scss */
 
 /* line 7, node_modules/bootstrap/scss/utilities/_sizing.scss */
+.h-100 {
+  height: 100% !important;
+}
 
 /* line 7, node_modules/bootstrap/scss/utilities/_sizing.scss */
 
@@ -4176,16 +4186,21 @@ textarea.form-control {
 /* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
 /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
+.p-1 {
+  padding: 0.25rem !important;
+}
 
 /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
-.pt-1 {
+
+.py-1 {
   padding-top: 0.25rem !important;
 }
 
 /* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
 /* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
-.pb-1 {
+
+.py-1 {
   padding-bottom: 0.25rem !important;
 }
 
@@ -4214,16 +4229,10 @@ textarea.form-control {
 /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
 /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
-.pt-4 {
-  padding-top: 1.5rem !important;
-}
 
 /* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
 /* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
-.pb-4 {
-  padding-bottom: 1.5rem !important;
-}
 
 /* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
@@ -4348,8 +4357,16 @@ textarea.form-control {
   /* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
+  
+  .py-sm-3 {
+    padding-top: 1rem !important;
+  }
   /* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
+  
+  .py-sm-3 {
+    padding-bottom: 1rem !important;
+  }
   /* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
@@ -4446,8 +4463,16 @@ textarea.form-control {
   /* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
+  
+  .py-md-4 {
+    padding-top: 1.5rem !important;
+  }
   /* line 16, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 20, node_modules/bootstrap/scss/utilities/_spacing.scss */
+  
+  .py-md-4 {
+    padding-bottom: 1.5rem !important;
+  }
   /* line 24, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
   /* line 12, node_modules/bootstrap/scss/utilities/_spacing.scss */
@@ -5015,15 +5040,15 @@ body {
 }
 
 /* line 30, src/assets/scss/base/_typography.scss */
-h1, h2,
-.h1, .h2 {
+h1, h2, h4,
+.h1, .h2, .h4 {
   margin-bottom: 28px;
 }
 
 @media (min-width: 992px) {
   /* line 30, src/assets/scss/base/_typography.scss */
-  h1, h2,
-  .h1, .h2 {
+  h1, h2, h4,
+  .h1, .h2, .h4 {
     margin-bottom: 36px;
   }
 }
@@ -5047,8 +5072,10 @@ p {
 /* line 63, src/assets/scss/base/_typography.scss */
 h1,
 h2,
+h4,
 .h1,
-.h2 {
+.h2,
+.h4 {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -5084,9 +5111,21 @@ h2,
 }
 
 /* line 131, src/assets/scss/base/_typography.scss */
+h4, .h4 {
+  color: #111111;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.05px;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
 
 @media (min-width: 992px) {
   /* line 131, src/assets/scss/base/_typography.scss */
+  h4, .h4 {
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+  }
 }
 
 /* line 146, src/assets/scss/base/_typography.scss */
@@ -5201,8 +5240,16 @@ nav .navbar-collapse .close-nav {
   }
 }
 
+@media (max-width: 767.98px) {
+  /* line 27, src/assets/scss/layout/_header.scss */
+  nav .navbar-collapse {
+    width: 50vw;
+    right: -50vw;
+  }
+}
+
 @media (max-width: 991.98px) {
-  /* line 74, src/assets/scss/layout/_header.scss */
+  /* line 79, src/assets/scss/layout/_header.scss */
   nav .navbar-collapse .navbar-nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -5211,13 +5258,13 @@ nav .navbar-collapse .close-nav {
 }
 
 @media (max-width: 991.98px) {
-  /* line 79, src/assets/scss/layout/_header.scss */
+  /* line 84, src/assets/scss/layout/_header.scss */
   nav .navbar-collapse .navbar-nav .nav-item {
     margin: 0 0 1rem;
   }
 }
 
-/* line 88, src/assets/scss/layout/_header.scss */
+/* line 93, src/assets/scss/layout/_header.scss */
 
 /* line 4, src/assets/scss/layout/_footer.scss */
 .footer {
@@ -5227,8 +5274,9 @@ nav .navbar-collapse .close-nav {
 }
 
 /* line 8, src/assets/scss/layout/_footer.scss */
-.footer p {
+.footer h4 {
   margin: 0;
+  text-transform: none;
 }
 
 /* line 5, src/assets/scss/components/_button.scss */
@@ -5413,14 +5461,16 @@ nav .navbar-collapse .close-nav {
 #hero {
   z-index: 1;
   top: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
-/* line 9, src/assets/scss/pages/_home.scss */
+/* line 11, src/assets/scss/pages/_home.scss */
 #hero video {
-  width: 100%;
+  position: absolute;
 }
 
-/* line 13, src/assets/scss/pages/_home.scss */
+/* line 20, src/assets/scss/pages/_home.scss */
 #hero .overlay {
   background-color: #000000;
   opacity: 40%;
@@ -5430,42 +5480,42 @@ nav .navbar-collapse .close-nav {
   top: 0;
 }
 
-/* line 23, src/assets/scss/pages/_home.scss */
+/* line 30, src/assets/scss/pages/_home.scss */
 #about {
   overflow: hidden;
 }
 
-/* line 25, src/assets/scss/pages/_home.scss */
+/* line 32, src/assets/scss/pages/_home.scss */
 #about .container {
   position: relative;
   z-index: 999;
 }
 
-/* line 30, src/assets/scss/pages/_home.scss */
+/* line 37, src/assets/scss/pages/_home.scss */
 #about .container-two {
   position: relative;
   z-index: 9;
   height: 855.5px;
 }
 
-/* line 38, src/assets/scss/pages/_home.scss */
+/* line 45, src/assets/scss/pages/_home.scss */
 #about-copy {
   margin-top: -184px;
 }
 
-/* line 42, src/assets/scss/pages/_home.scss */
+/* line 49, src/assets/scss/pages/_home.scss */
 #services,
 #benefits-section,
 #get-started-section {
   margin-top: -315.75px;
 }
 
-/* line 49, src/assets/scss/pages/_home.scss */
+/* line 56, src/assets/scss/pages/_home.scss */
 #bid-request {
   margin-top: -967.25px;
 }
 
-/* line 53, src/assets/scss/pages/_home.scss */
+/* line 60, src/assets/scss/pages/_home.scss */
 #services {
   height: 1303px;
 }

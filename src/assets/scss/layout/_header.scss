@@ -71,6 +71,11 @@ nav {
       text-align: center;
     }
 
+    @include media-breakpoint-down(sm) {
+      width: 50vw;
+      right: -50vw;
+    }
+
     .navbar-nav {
       @include media-breakpoint-down(md) {
         align-items: center;

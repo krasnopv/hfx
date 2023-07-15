@@ -17804,6 +17804,8 @@ $(document).ready(function () {
   });
 
   var a = 0;
+  const navbarCollapse = $('.navbar-collapse');
+
   $(window).scroll(function() {
     var oTop = $('#counter').offset().top - window.innerHeight;
     if (a === 0 && $(window).scrollTop() > oTop) {
@@ -17815,7 +17817,6 @@ $(document).ready(function () {
         }).animate({
             countNum: countTo
           },
-
           {
             duration: 3000,
             easing: 'swing',
@@ -17825,7 +17826,6 @@ $(document).ready(function () {
             complete: function() {
               $this.text(this.countNum);
             }
-
           });
       });
       a = 1;
@@ -17833,11 +17833,46 @@ $(document).ready(function () {
   });
 
   $('.close-nav').on( "click", () => {
-    $('.navbar-collapse').css({'right': '-30vw'});
-    $('.navbar-collapse').removeClass('show');
+    navbarCollapse.css({'right': 0 - navbarCollapse.width() - 50});
+    navbarCollapse.removeClass('show');
   })
 
   console.log("Ready!");
+
+  const onResize = () => {
+    const main = $('#hero');
+    const video = $('video');
+    const windowRatio = window.innerWidth / window.innerHeight;
+    const mainRatio = main.width() / main.height();
+    const videoRatio = video.width() / video.height();
+  
+    navbarCollapse.css({'right': 0 - navbarCollapse.width() - 50});
+
+    $('.col-hex').each(function() {
+      $(this).find(".hex").css({
+        "width": `${parseInt($(this).css("height")) * 0.8660254 + $(this).find(".hex").css('margin-top')}`
+      });
+    });
+
+    console.log(windowRatio);
+    console.log(videoRatio);
+    console.log('------------------------------------');
+
+    if (windowRatio >= videoRatio) {
+      video.css({'width': '100%', 'heigh': 'auto'});
+      console.log('windowRatio >= videoRatio');
+    } else {
+      console.log('windowRatio < videoRatio');
+      video.css({'width': 'auto', 'heigh': '100vh', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)'});
+    }
+  }
+
+  onResize();
+
+  $(window).resize(function() {
+    onResize();
+  });
+
 });
 
 $(window).on("load", function () {
@@ -17862,11 +17897,29 @@ $(window).on("load", function () {
   console.log("Loaded!");
 
   const onResize = () => {
+    const main = $('#hero');
+    const video = $('video');
+    const windowRatio = window.innerWidth / window.innerHeight;
+    const mainRatio = main.width() / main.height();
+    const videoRatio = video.width() / video.height();
+  
     $('.col-hex').each(function() {
       $(this).find(".hex").css({
         "width": `${parseInt($(this).css("height")) * 0.8660254 + $(this).find(".hex").css('margin-top')}`
       });
     });
+
+    console.log(windowRatio);
+    console.log(videoRatio);
+    console.log('------------------------------------');
+
+    if (windowRatio >= videoRatio) {
+      video.css({'width': '100%', 'heigh': 'auto'});
+      console.log('windowRatio >= videoRatio');
+    } else {
+      console.log('windowRatio < videoRatio');
+      video.css({'width': 'auto', 'heigh': '100vh', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)'});
+    }
   }
 
   onResize();
