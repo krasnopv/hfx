@@ -17,6 +17,10 @@
       margin-top: 0 - $hex-height-large + $hex-height-large/4 - $hex-height-small-counter/4;
       left: 0;
       margin-left: 0.5rem;
+
+      @include media-breakpoint-down(sm) {
+        left: auto;
+      }
     }
   }
 }
@@ -34,7 +38,6 @@
 .hex-large {
   height: $hex-height-large;
   padding: 0% 8%;
-  // margin-top: 0 - $hex-height-large / 4 + 10px;
 
   .hex {
     margin-left: 0 - map-get($container-max-widths , xl) + 10;
@@ -42,7 +45,6 @@
 
     &.right {
       position: relative;
-      // top: -50%;
       margin: auto;
       margin-left: 0.5rem;
     }

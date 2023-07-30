@@ -38,10 +38,23 @@
 }
 
 #about-copy {
-  margin-top: 0 - $hex-height-mid / 4 + 10px;
+  @include media-breakpoint-up(lg) {
+    margin-top: 0 - $hex-height-mid / 4 + 10px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    margin-top: -130px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: -70px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+  }
 }
 
-#services,
 #benefits-section,
 #get-started-section,
 #get-started-form {
@@ -54,4 +67,72 @@
 
 #services {
   height: $hex-height-large;
+  margin-top: 0 - $hex-height-large / 4 + 10px;
+  
+  @media (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg)) {
+    .hex-small {
+
+      .hex {
+        .row {
+          padding: 0 20% 0 0 !important;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .hex-small {
+
+      .hex {
+        left: auto;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    margin-top: -90px;
+
+    .hex-large {
+      height: 1000px;
+      
+      .hex {
+        margin-left: -350px;
+      }
+    }
+
+    .hex-small {
+
+      .hex {
+        margin-top: -90px;
+      }
+    }
+  }
+}
+
+#benefits-section {
+  @include media-breakpoint-down(sm) {
+    margin-top: -80px;
+  }
+}
+
+#get-started-section {
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    margin-top: -90px;
+
+    .hex-large {
+      height: 1000px;
+
+      .hex {
+        margin-left: -350px;
+      }
+    }
+  }
+}
+
+#bid-request {
+  @include media-breakpoint-down(sm) {
+    margin-top: -200px;
+  }
 }

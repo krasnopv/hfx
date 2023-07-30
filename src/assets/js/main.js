@@ -73,6 +73,13 @@ $(document).ready(function () {
 });
 
 $(window).on("load", function () {
+  const hexProportion = 0.8660254;
+  const hexHeightSmall = 550;
+  const hexWidthSmall = hexHeightSmall * hexProportion;
+  const hexHeightMid = 776;
+  const hexWidthMid = hexHeightMid * hexProportion;
+  const hexPadding = 10;
+
   console.log('loading...');
 
   $(function () {
@@ -83,6 +90,11 @@ $(window).on("load", function () {
     });
   });
   
+  const calcTopMargin = (prevWidth, curWidth, curHeight) => {
+    return ((((window.innerWidth - curWidth - prevWidth) / 2 - 10 ) > 0) ?
+      0 :
+      0 - ((window.innerWidth - curWidth - prevWidth) / 2 - 10 )) - (curHeight / 4 - hexPadding);
+  };
 
   const navHeight = parseInt($("nav").css("height"));
   const sectionMarginTop = parseInt($("section").css("margin-top"));
@@ -110,9 +122,18 @@ $(window).on("load", function () {
     const mainRatio = main.width() / main.height();
     const videoRatio = video.width() / video.height();
   
+    // $('#about-copy').css({
+    //   "margin-top": calcTopMargin(hexWidthSmall, hexWidthMid, hexHeightMid)
+    // });
+
+    console.log(
+      calcTopMargin(hexWidthSmall, hexWidthMid, hexHeightMid)
+      // ((((window.innerWidth - hexWidthMid - hexWidthSmall) / 2 - 10 ) > 0) ? 0 : 0 - ((window.innerWidth - hexWidthMid - hexWidthSmall) / 2 - 10 )) - (hexHeightMid / 4 - hexPadding)
+    );
+    
     $('.col-hex').each(function() {
       $(this).find(".hex").css({
-        "width": `${parseInt($(this).css("height")) * 0.8660254 + $(this).find(".hex").css('margin-top')}`
+        "width": `${parseInt($(this).css("height")) * 0.8660254}`
       });
     });
 
