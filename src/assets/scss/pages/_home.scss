@@ -38,6 +38,9 @@
 }
 
 #about-copy {
+  z-index: 99;
+  position: relative;
+
   @include media-breakpoint-up(lg) {
     margin-top: 0 - $hex-height-mid / 4 + 10px;
   }
@@ -69,6 +72,10 @@
   height: $hex-height-large;
   margin-top: 0 - $hex-height-large / 4 + 10px;
   
+  #service {
+    padding: 10rem 0;
+  }
+
   @media (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg)) {
     .hex-small {
 
@@ -111,12 +118,19 @@
 }
 
 #benefits-section {
+  z-index: 99;
+  position: relative;
+
   @include media-breakpoint-down(sm) {
     margin-top: -80px;
   }
 }
 
 #get-started-section {
+  #get-started {
+    padding: 10rem 0;
+  }
+
   @include media-breakpoint-down(sm) {
     height: auto;
     margin-top: -90px;
@@ -132,6 +146,10 @@
 }
 
 #bid-request {
+  #bid {
+    padding: 10rem 0;
+  }
+
   @include media-breakpoint-down(sm) {
     margin-top: -200px;
   }

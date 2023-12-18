@@ -21,10 +21,13 @@ if (IsInjected($email)) {
   exit;
 }
 
-$email_from = 'krasnopv@gmail.com';//<== update the email address
+$email_from = 'form@hivefx.io';//<== update the email address
 $email_subject = "New Form submission";
-$email_body = "You have received a new message from the user $name.\n".
-  "Here is the message:\n $message".
+$email_body = "You have received a new message from the user $name<$email>:\n".
+  "$message\n\n".
+  "Project: $project \n".
+  "Deadline: $date \n".
+  "Download kink: $link \n";
 
 $to = "me@krasnopv.com";//<== update the email address
 $headers = "From: $email_from \r\n";
@@ -32,7 +35,7 @@ $headers .= "Reply-To: $email \r\n";
 //Send the email!
 mail($to,$email_subject,$email_body,$headers);
 //done. redirect to thank-you page.
-header('Location: index.html');
+header('Location: /');
 
 
 // Function to validate against any email injection attempts
