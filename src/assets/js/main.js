@@ -35,7 +35,7 @@ $(document).ready(function () {
     }
   });
 
-  $('.close-nav').on( "click", () => {
+  $('.close-nav, .navbar a').on( "click", () => {
     navbarCollapse.css({'right': 0 - navbarCollapse.width() - 50});
     navbarCollapse.removeClass('show');
   })
